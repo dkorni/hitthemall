@@ -31,7 +31,7 @@ public class DragGameobject : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        transform.position = GetMousePosition() + mouseOffset;
+        rigidbody.position = GetMousePosition() + mouseOffset;
     }
 
     private void OnMouseUp()
