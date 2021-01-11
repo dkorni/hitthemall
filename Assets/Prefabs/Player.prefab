@@ -55,6 +55,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -79,6 +80,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!54 &406721119
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -105,7 +107,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 1860116888}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -79.99997, y: -0.000002793612, z: 0.000009313227}
+  m_ConnectedAnchor: {x: -24, y: -0.0000008380837, z: 0.0000027939677}
   serializedVersion: 2
   m_Spring: 100
   m_Damper: 20
@@ -144,7 +146,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 1816418937}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -80.00008, y: -0.0000027936258, z: 0.0000009685746}
+  m_ConnectedAnchor: {x: -24.000023, y: -0.000000838088, z: 0.0000002905715}
   serializedVersion: 2
   m_Spring: 100
   m_Damper: 20
@@ -183,7 +185,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 407348898}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -79.99988, y: -0.0000027936194, z: -0.000009760262}
+  m_ConnectedAnchor: {x: -24, y: -0.0000008380848, z: -0.0000029280789}
   serializedVersion: 2
   m_Spring: 100
   m_Damper: 20
@@ -222,7 +224,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 1529986367}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -80.000015, y: -0.000002793611, z: 0.000011697413}
+  m_ConnectedAnchor: {x: -24, y: -0.00000083808266, z: 0.000003509224}
   serializedVersion: 2
   m_Spring: 100
   m_Damper: 20
@@ -261,7 +263,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 367248641}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -80, y: -0.0000027936248, z: -0.00000022352287}
+  m_ConnectedAnchor: {x: -24, y: -0.00000083808345, z: -0.00000006705659}
   serializedVersion: 2
   m_Spring: 100
   m_Damper: 20
@@ -300,7 +302,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 218697001}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -80.00003, y: -0.000002793608, z: 0.00001050532}
+  m_ConnectedAnchor: {x: -24, y: -0.0000008380821, z: 0.0000031515956}
   serializedVersion: 2
   m_Spring: 100
   m_Damper: 20
@@ -339,7 +341,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 669853450}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -80, y: -0.0000027936185, z: -0.0000085681695}
+  m_ConnectedAnchor: {x: -23.99997, y: -0.0000008380848, z: -0.000002570451}
   serializedVersion: 2
   m_Spring: 100
   m_Damper: 20
@@ -378,7 +380,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 1191689210}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -79.99988, y: -0.0000027936103, z: 0.0000021606675}
+  m_ConnectedAnchor: {x: -23.99997, y: -0.0000008380839, z: 0.0000006482003}
   serializedVersion: 2
   m_Spring: 100
   m_Damper: 20
@@ -417,7 +419,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 406721119}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -80, y: -0.000002793613, z: 0.000008121134}
+  m_ConnectedAnchor: {x: -23.999992, y: -0.00000083808436, z: 0.0000024363399}
   serializedVersion: 2
   m_Spring: 100
   m_Damper: 20
@@ -469,7 +471,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 1935869451}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -79.99994, y: -0.0000027936176, z: 0.0000009685746}
+  m_ConnectedAnchor: {x: -24, y: -0.00000083808345, z: 0.00000029057128}
   serializedVersion: 2
   m_Spring: 100
   m_Damper: 20
@@ -521,7 +523,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 1326612334}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -80, y: -0.0000027936221, z: -0.0000061839837}
+  m_ConnectedAnchor: {x: -23.99997, y: -0.00000083808663, z: -0.0000018551953}
   serializedVersion: 2
   m_Spring: 100
   m_Damper: 20
@@ -561,8 +563,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3399165376339985647}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.06, y: 1.92, z: 0}
-  m_LocalScale: {x: 0.62295, y: 2.7627833, z: 0.62295}
+  m_LocalPosition: {x: 3.146, y: 2.34, z: 0}
+  m_LocalScale: {x: 0.41649193, y: 1.8471416, z: 0.41649193}
   m_Children:
   - {fileID: 2871171858946504084}
   m_Father: {fileID: 4167740109172446162}
@@ -591,6 +593,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -615,6 +618,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!136 &7339147799285793450
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -655,7 +659,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 1566043943}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 1.5012219, y: -0.012573182, z: 0.0000013952229}
+  m_ConnectedAnchor: {x: 11.073357, y: -0.012573182, z: 0.00000041856694}
   serializedVersion: 2
   m_Spring: 10000
   m_Damper: 20
@@ -678,7 +682,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 172945180}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -79.99988, y: -0.000002197572, z: -0.000010952357}
+  m_ConnectedAnchor: {x: -24, y: -0.0000006592709, z: -0.000003285708}
   serializedVersion: 2
   m_Spring: 100
   m_Damper: 20
@@ -750,7 +754,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 1432643046}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -79.99994, y: -0.0000027936176, z: 0.0000045448533}
+  m_ConnectedAnchor: {x: -24, y: -0.00000083808436, z: 0.000001363456}
   serializedVersion: 2
   m_Spring: 100
   m_Damper: 20
@@ -789,7 +793,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 530027400}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -80, y: -0.000002793614, z: 0.0000033527604}
+  m_ConnectedAnchor: {x: -23.999985, y: -0.0000008380839, z: 0.0000010058282}
   serializedVersion: 2
   m_Spring: 100
   m_Damper: 20
@@ -828,7 +832,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 1787393230}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -80, y: -0.000002793624, z: -0.000009760262}
+  m_ConnectedAnchor: {x: -24, y: -0.0000008380871, z: -0.0000029280802}
   serializedVersion: 2
   m_Spring: 100
   m_Damper: 20
@@ -897,6 +901,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -921,6 +926,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!54 &1608033099
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -963,7 +969,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 1608033099}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.08918202, y: -0.012573182, z: 0.00000040753127}
+  m_ConnectedAnchor: {x: -10.493678, y: -0.012573182, z: 0.00000012225938}
   serializedVersion: 2
   m_Spring: 10000
   m_Damper: 20
@@ -1002,7 +1008,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 2000098124}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -79.99997, y: -0.0000027936112, z: 0.000006929041}
+  m_ConnectedAnchor: {x: -24, y: -0.0000008380848, z: 0.0000020787118}
   serializedVersion: 2
   m_Spring: 100
   m_Damper: 20
@@ -1041,7 +1047,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 1425768010}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -79.99988, y: -0.0000027936176, z: -0.0000037998016}
+  m_ConnectedAnchor: {x: -24.000008, y: -0.0000008380848, z: -0.0000011399395}
   serializedVersion: 2
   m_Spring: 100
   m_Damper: 20
@@ -1080,7 +1086,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 246865477}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -80.00006, y: -0.0000027936176, z: 0.000012889501}
+  m_ConnectedAnchor: {x: -24, y: -0.0000008380848, z: -0.000003285708}
   serializedVersion: 2
   m_Spring: 100
   m_Damper: 20
@@ -1119,7 +1125,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 2089835376}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -80, y: -0.0000027936148, z: -0.0000026077087}
+  m_ConnectedAnchor: {x: -24, y: -0.00000083808663, z: -0.00000078231164}
   serializedVersion: 2
   m_Spring: 100
   m_Damper: 20
@@ -1158,7 +1164,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 136226269}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -79.99997, y: -0.0000027936103, z: 0.00001050532}
+  m_ConnectedAnchor: {x: -24, y: -0.0000008380832, z: 0.0000031515956}
   serializedVersion: 2
   m_Spring: 100
   m_Damper: 20
@@ -1227,6 +1233,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1251,6 +1258,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!54 &1566043943
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1293,7 +1301,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 548513746}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -80, y: -0.000002793613, z: -0.0000049918945}
+  m_ConnectedAnchor: {x: -24, y: -0.00000083808845, z: -0.0000014975674}
   serializedVersion: 2
   m_Spring: 100
   m_Damper: 20
@@ -1332,7 +1340,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 2038139647}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -79.999985, y: -0.0000027936103, z: -0.0000014156158}
+  m_ConnectedAnchor: {x: -24, y: -0.00000083808527, z: -0.00000042468446}
   serializedVersion: 2
   m_Spring: 100
   m_Damper: 20
@@ -1371,7 +1379,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 443472496}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -80, y: -0.0000027936076, z: -0.0000073760766}
+  m_ConnectedAnchor: {x: -24, y: -0.000000838083, z: -0.0000022128231}
   serializedVersion: 2
   m_Spring: 100
   m_Damper: 20
@@ -1411,8 +1419,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9143729216336236503}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.21, y: 1.92, z: 0}
-  m_LocalScale: {x: 0.62295, y: 2.7627833, z: 0.62295}
+  m_LocalPosition: {x: -3.156, y: 2.34, z: 0}
+  m_LocalScale: {x: 0.41649193, y: 1.8471416, z: 0.41649193}
   m_Children:
   - {fileID: 2482123837470412661}
   m_Father: {fileID: 4167740109172446162}
@@ -1441,6 +1449,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1465,6 +1474,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!136 &8785462067415788940
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1505,7 +1515,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 1621477622}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -80, y: -0.0000027936112, z: 0.000005736946}
+  m_ConnectedAnchor: {x: -24, y: -0.00000083808436, z: 0.0000017210839}
   serializedVersion: 2
   m_Spring: 100
   m_Damper: 20
