@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\DragGameobject.cs" />
+    <Compile Include="Assets\Slingshot.cs" />
     <Reference Include="UnityEngine">
       <HintPath>D:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
