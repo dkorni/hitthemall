@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 409916}
   - component: {fileID: 3315652}
   - component: {fileID: 2311072}
+  - component: {fileID: -1900628393493490584}
   m_Layer: 0
   m_Name: Stonehenge_04
   m_TagString: Untagged
@@ -172,6 +173,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!208 &-1900628393493490584
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145984}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.0080001, y: 2.345, z: 0.711}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.215, y: 1.7500001, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &163462
 GameObject:
   m_ObjectHideFlags: 0
