@@ -34,6 +34,7 @@ namespace Character
         public void Kill()
         {
             m_navAgent.enabled = false;
+            m_navAgent.velocity = Vector3.zero;
             m_isAlive = false;
             m_animator.SetBool(IsDeadAnim, !m_isAlive);
         }
