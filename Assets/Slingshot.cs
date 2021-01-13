@@ -11,7 +11,7 @@ public class Slingshot : MonoBehaviour
 
     public void Start()
     {
-        joints = GetComponentsInChildren<SpringJoint>().Where(j=>j.connectedBody.tag != "Column").ToArray();
+        joints = GetComponentsInChildren<SpringJoint>().Where(j=>!j.connectedBody.CompareTag("Column")).ToArray();
 
         foreach (var joint in joints)
         {
