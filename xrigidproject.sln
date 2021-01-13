@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{c85883be-4d85-0d56-19aa-0983d08a936e}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeanTouch", "LeanTouch.csproj", "{c5b72730-2eb3-1e0c-7e50-2d88dd47469c}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{c85883be-4d85-0d56-19aa-0983d08a936e}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeanCommon", "LeanCommon.csproj", "{b641986c-f423-2db0-4425-3d26cab2d587}"
 EndProject
@@ -15,14 +15,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{c85883be-4d85-0d56-19aa-0983d08a936e}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{c85883be-4d85-0d56-19aa-0983d08a936e}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{c85883be-4d85-0d56-19aa-0983d08a936e}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{c85883be-4d85-0d56-19aa-0983d08a936e}.Release|Any CPU.Build.0 = Release|Any CPU
 		{c5b72730-2eb3-1e0c-7e50-2d88dd47469c}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{c5b72730-2eb3-1e0c-7e50-2d88dd47469c}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{c5b72730-2eb3-1e0c-7e50-2d88dd47469c}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{c5b72730-2eb3-1e0c-7e50-2d88dd47469c}.Release|Any CPU.Build.0 = Release|Any CPU
+		{c85883be-4d85-0d56-19aa-0983d08a936e}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{c85883be-4d85-0d56-19aa-0983d08a936e}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{c85883be-4d85-0d56-19aa-0983d08a936e}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{c85883be-4d85-0d56-19aa-0983d08a936e}.Release|Any CPU.Build.0 = Release|Any CPU
 		{b641986c-f423-2db0-4425-3d26cab2d587}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{b641986c-f423-2db0-4425-3d26cab2d587}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{b641986c-f423-2db0-4425-3d26cab2d587}.Release|Any CPU.ActiveCfg = Release|Any CPU

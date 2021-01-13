@@ -1,20 +1,12 @@
 ﻿using System;
-using Character;
+using Enemy;
 using UnityEngine;
 
 namespace Player
 {
     public class EnemyDestroyer : MonoBehaviour
     {
-        private void OnTriggerEnter(Collider other)
-        {
-            EnemyController enemy = other.gameObject.GetComponentInParent<EnemyController>();
-            if (enemy != null)
-            {
-                Debug.Log("Kill!");
-                enemy.Kill();
-            }
-        }
+        [SerializeField] private float m_pushForceMult = 5;
 
         private void OnCollisionEnter(Collision other)
         {
@@ -22,7 +14,10 @@ namespace Player
             if (enemy != null)
             {
                 Debug.Log("Kill!");
-                enemy.Kill();
+                Vector3 vel = GetComponent<Rigidbody>().velocity;
+                vel.y += 5;
+
+                enemy.Kill(vel.normalized * m_pushForceMult);
             }
         }
     }

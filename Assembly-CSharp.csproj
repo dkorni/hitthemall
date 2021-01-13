@@ -50,18 +50,18 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\DragGameobject.cs" />
      <Compile Include="Assets\GradientSky\Scripts\GradientSkyCamera.cs" />
      <Compile Include="Assets\ToonShader\Scripts\VCCalculator.cs" />
      <Compile Include="Assets\GradientSky\Scripts\Common\GradientSkyCommon.cs" />
      <Compile Include="Assets\Slingshot.cs" />
      <Compile Include="Assets\Low Poly Rocks Pack\Bonus Assets\Scripts\LowPolyRocks_CloudsControl.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyController.cs" />
+     <Compile Include="Assets\Scripts\Player\EnemyDestroyer.cs" />
      <Compile Include="Assets\GradientSky\Scripts\GradientSkyObject.cs" />
      <Compile Include="Assets\Low Poly Rocks Pack\Bonus Assets\Scripts\LowPolyRocks_FireLightControl.cs" />
      <Compile Include="Assets\Low Poly Rocks Pack\Bonus Assets\Scripts\LowPolyRocks_CameraControl.cs" />
      <Compile Include="Assets\Low Poly Rocks Pack\Bonus Assets\Scripts\LowPolyRocks_SunControl.cs" />
-     <Compile Include="Assets\Scripts\Enemy\EnemyController.cs" />
-     <Compile Include="Assets\DragGameobject.cs" />
-     <Compile Include="Assets\Scripts\Player\EnemyDestroyer.cs" />
      <None Include="Assets\ToonShader\Shaders\OutlineVC\ToonBumpVC.shader" />
      <None Include="Assets\ToonShader\Shaders\ToonGrass.shader" />
      <None Include="Assets\GradientSky\Shaders\VertexColorCamera.shader" />
