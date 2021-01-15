@@ -50,17 +50,17 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Lean\Common\Documentation\LeanGuide.cs" />
-     <Compile Include="Assets\Lean\Common\Examples\Scripts\LeanUpgradeEventSystem.cs" />
-     <Compile Include="Assets\Lean\Common\Scripts\LeanHelper.cs" />
-     <Compile Include="Assets\Lean\Common\Scripts\LeanInput.cs" />
-     <Compile Include="Assets\Lean\Common\Scripts\LeanInspector.cs" />
-     <Compile Include="Assets\Lean\Common\Examples\Scripts\LeanLinkTo.cs" />
-     <None Include="Assets\Lean\Common\LeanCommon.asmdef" />
-     <None Include="Assets\Lean\Common\Examples\Fonts\OFL.txt" />
-     <None Include="Assets\Lean\Common\Examples\Shaders\Object.shader" />
-     <None Include="Assets\Lean\Common\Examples\Shaders\Skybox.shader" />
-     <None Include="Assets\Lean\Common\Examples\Shaders\Alpha.shader" />
+     <Compile Include="Assets\3rdParty\Lean\Common\Documentation\LeanGuide.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Common\Examples\Scripts\LeanUpgradeEventSystem.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Common\Scripts\LeanHelper.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Common\Scripts\LeanInput.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Common\Scripts\LeanInspector.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Common\Examples\Scripts\LeanLinkTo.cs" />
+     <None Include="Assets\3rdParty\Lean\Common\LeanCommon.asmdef" />
+     <None Include="Assets\3rdParty\Lean\Common\Examples\Fonts\OFL.txt" />
+     <None Include="Assets\3rdParty\Lean\Common\Examples\Shaders\Object.shader" />
+     <None Include="Assets\3rdParty\Lean\Common\Examples\Shaders\Skybox.shader" />
+     <None Include="Assets\3rdParty\Lean\Common\Examples\Shaders\Alpha.shader" />
  <Reference Include="UnityEditor.UI">
  <HintPath>D:/JAMS/xrigidproject/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
@@ -270,6 +270,27 @@
  </Reference>
  <Reference Include="UnityEditor.WindowsStandalone.Extensions">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.8f1/2020.1.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween">
+ <HintPath>D:/JAMS/xrigidproject/Assets/3rdParty/Demigiant/DOTween/DOTween.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTweenEditor">
+ <HintPath>D:/JAMS/xrigidproject/Assets/3rdParty/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
+ <HintPath>D:/JAMS/xrigidproject/Assets/3rdParty/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
+ </Reference>
+ <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
+ <HintPath>D:/JAMS/xrigidproject/Assets/3rdParty/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
+ </Reference>
+ <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Pdb">
+ <HintPath>D:/JAMS/xrigidproject/Assets/3rdParty/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll</HintPath>
+ </Reference>
+ <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Rocks">
+ <HintPath>D:/JAMS/xrigidproject/Assets/3rdParty/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Rocks.dll</HintPath>
+ </Reference>
+ <Reference Include="Zenject-usage">
+ <HintPath>D:/JAMS/xrigidproject/Assets/3rdParty/Zenject/Source/Usage/Zenject-usage.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.8f1/2020.1.11f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
