@@ -52,27 +52,42 @@
   <ItemGroup>
      <Compile Include="Assets\DragGameobject.cs" />
      <Compile Include="Assets\GradientSky\Scripts\GradientSkyCamera.cs" />
+     <Compile Include="Assets\3rdParty\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
      <Compile Include="Assets\ToonShader\Scripts\VCCalculator.cs" />
+     <Compile Include="Assets\Scripts\Leveling\LevelContainer.cs" />
+     <Compile Include="Assets\3rdParty\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
      <Compile Include="Assets\GradientSky\Scripts\Common\GradientSkyCommon.cs" />
-     <Compile Include="Assets\Slingshot.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyContainer.cs" />
+     <Compile Include="Assets\3rdParty\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
+     <Compile Include="Assets\Scripts\Game\GameInstaller.cs" />
+     <Compile Include="Assets\3rdParty\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
      <Compile Include="Assets\Low Poly Rocks Pack\Bonus Assets\Scripts\LowPolyRocks_CloudsControl.cs" />
+     <Compile Include="Assets\Scripts\Player\LockerController.cs" />
+     <Compile Include="Assets\Scripts\Game\Game.cs" />
+     <Compile Include="Assets\3rdParty\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyController.cs" />
+     <Compile Include="Assets\Scripts\Leveling\Level.cs" />
      <Compile Include="Assets\Scripts\Player\EnemyDestroyer.cs" />
      <Compile Include="Assets\GradientSky\Scripts\GradientSkyObject.cs" />
+     <Compile Include="Assets\3rdParty\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
+     <Compile Include="Assets\3rdParty\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
      <Compile Include="Assets\Low Poly Rocks Pack\Bonus Assets\Scripts\LowPolyRocks_FireLightControl.cs" />
      <Compile Include="Assets\Low Poly Rocks Pack\Bonus Assets\Scripts\LowPolyRocks_CameraControl.cs" />
      <Compile Include="Assets\Low Poly Rocks Pack\Bonus Assets\Scripts\LowPolyRocks_SunControl.cs" />
      <None Include="Assets\ToonShader\Shaders\OutlineVC\ToonBumpVC.shader" />
      <None Include="Assets\ToonShader\Shaders\ToonGrass.shader" />
+     <None Include="Assets\3rdParty\UniRx\ReadMe.txt" />
      <None Include="Assets\GradientSky\Shaders\VertexColorCamera.shader" />
      <None Include="Assets\ToonShader\Shaders\ToonDiffuseDissolve.shader" />
      <None Include="Assets\ToonShader\Shaders\ToonDiffuse.shader" />
      <None Include="Assets\ToonShader\Shaders\OutlineVC\ToonDiffuseVC.shader" />
-     <None Include="Assets\Lean\READ ME.txt" />
+     <None Include="Assets\3rdParty\Lean\READ ME.txt" />
      <None Include="Assets\ToonShader\Shaders\ToonCrystal.shader" />
      <None Include="Assets\ToonShader\Shaders\ToonBumpDissolve.shader" />
      <None Include="Assets\GradientSky\Shaders\VertexColorObject.shader" />
      <None Include="Assets\ToonShader\Shaders\OutlineVC\ToonDiffuseDissolveVC.shader" />
+     <None Include="Assets\3rdParty\Demigiant\DOTween\readme.txt" />
      <None Include="Assets\Low Poly Rocks Pack\Demo\Asset _Scenes\Info.txt" />
      <None Include="Assets\ToonShader\Shaders\OutlineVC\ToonBumpDissolveVC.shader" />
      <None Include="Assets\ToonShader\Shaders\MultiTexture\ToonDiffuseMultiTexture.shader" />
@@ -293,6 +308,24 @@
  </Reference>
  <Reference Include="UnityEditor">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.8f1/2020.1.11f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween">
+ <HintPath>D:/JAMS/xrigidproject/Assets/3rdParty/Demigiant/DOTween/DOTween.dll</HintPath>
+ </Reference>
+ <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
+ <HintPath>D:/JAMS/xrigidproject/Assets/3rdParty/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
+ </Reference>
+ <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
+ <HintPath>D:/JAMS/xrigidproject/Assets/3rdParty/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
+ </Reference>
+ <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Pdb">
+ <HintPath>D:/JAMS/xrigidproject/Assets/3rdParty/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll</HintPath>
+ </Reference>
+ <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Rocks">
+ <HintPath>D:/JAMS/xrigidproject/Assets/3rdParty/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Rocks.dll</HintPath>
+ </Reference>
+ <Reference Include="Zenject-usage">
+ <HintPath>D:/JAMS/xrigidproject/Assets/3rdParty/Zenject/Source/Usage/Zenject-usage.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.8f1/2020.1.11f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -647,13 +680,41 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Zenject-Editor.csproj">
+      <Project>{3502690b-642d-970e-fa49-6fa6dc5796a3}</Project>
+      <Name>Zenject-Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UniRx.csproj">
+      <Project>{aef5cbf8-70a2-2eb5-c595-7a10c5b5c31c}</Project>
+      <Name>UniRx</Name>
+    </ProjectReference>
+    <ProjectReference Include="Zenject-ReflectionBaking-Editor.csproj">
+      <Project>{d800d7aa-c212-a42a-333a-547b9b99ef13}</Project>
+      <Name>Zenject-ReflectionBaking-Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="LeanCommon.csproj">
       <Project>{b641986c-f423-2db0-4425-3d26cab2d587}</Project>
       <Name>LeanCommon</Name>
     </ProjectReference>
+    <ProjectReference Include="Zenject-PoolMonitor-Editor.csproj">
+      <Project>{8f5c30fd-0558-f0b6-b1bd-92ff2b5302e6}</Project>
+      <Name>Zenject-PoolMonitor-Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="LeanTouch.csproj">
       <Project>{c5b72730-2eb3-1e0c-7e50-2d88dd47469c}</Project>
       <Name>LeanTouch</Name>
+    </ProjectReference>
+    <ProjectReference Include="Zenject.csproj">
+      <Project>{858a578d-493a-4deb-1e65-4e1fd89c4d67}</Project>
+      <Name>Zenject</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponentsEditor.csproj">
+      <Project>{02809ef9-46be-4c9e-0a93-b35ec7c50a6f}</Project>
+      <Name>NavMeshComponentsEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponents.csproj">
+      <Project>{149671af-7691-6c67-78c4-a11021220e79}</Project>
+      <Name>NavMeshComponents</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

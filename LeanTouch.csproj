@@ -50,42 +50,42 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Lean\Touch\Extras\LeanFingerUpdate.cs" />
-     <Compile Include="Assets\Lean\Touch\Scripts\LeanGesture.cs" />
-     <Compile Include="Assets\Lean\Touch\Extras\LeanFingerDown.cs" />
-     <Compile Include="Assets\Lean\Touch\Scripts\LeanFinger.cs" />
-     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanTouchEvents.cs" />
-     <Compile Include="Assets\Lean\Touch\Extras\LeanSelect.cs" />
-     <Compile Include="Assets\Lean\Touch\Extras\LeanTwistRotateAxis.cs" />
-     <Compile Include="Assets\Lean\Touch\Extras\LeanRoll.cs" />
-     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanDestroy.cs" />
-     <Compile Include="Assets\Lean\Touch\Extras\LeanPlane.cs" />
-     <Compile Include="Assets\Lean\Touch\Extras\LeanFingerSwipe.cs" />
-     <Compile Include="Assets\Lean\Touch\Extras\LeanFingerData.cs" />
-     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanPulseScale.cs" />
-     <Compile Include="Assets\Lean\Touch\Extras\LeanTwistRotate.cs" />
-     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanInfoText.cs" />
-     <Compile Include="Assets\Lean\Touch\Scripts\LeanTouch.cs" />
-     <Compile Include="Assets\Lean\Touch\Extras\LeanDragCamera.cs" />
-     <Compile Include="Assets\Lean\Touch\Extras\LeanPath.cs" />
-     <Compile Include="Assets\Lean\Touch\Extras\LeanSelectable.cs" />
-     <Compile Include="Assets\Lean\Touch\Extras\LeanFingerOld.cs" />
-     <Compile Include="Assets\Lean\Touch\Extras\LeanPinchScale.cs" />
-     <Compile Include="Assets\Lean\Touch\Scripts\LeanSnapshot.cs" />
-     <Compile Include="Assets\Lean\Touch\Extras\LeanSwipeBase.cs" />
-     <Compile Include="Assets\Lean\Touch\Extras\LeanSelectBase.cs" />
-     <Compile Include="Assets\Lean\Touch\Extras\LeanSelectableSpriteRendererColor.cs" />
-     <Compile Include="Assets\Lean\Touch\Extras\LeanFingerTap.cs" />
-     <Compile Include="Assets\Lean\Touch\Extras\LeanFingerFilter.cs" />
-     <Compile Include="Assets\Lean\Touch\Extras\LeanSelectableGraphicColor.cs" />
-     <Compile Include="Assets\Lean\Touch\Extras\LeanDragTranslate.cs" />
-     <Compile Include="Assets\Lean\Touch\Extras\LeanSelectableBehaviour.cs" />
-     <Compile Include="Assets\Lean\Touch\Extras\LeanFingerUp.cs" />
-     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanDragTrail.cs" />
-     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanSpawn.cs" />
-     <Compile Include="Assets\Lean\Touch\Extras\LeanScreenDepth.cs" />
-     <Compile Include="Assets\Lean\Touch\Extras\LeanSelectableRendererColor.cs" />
-     <None Include="Assets\Lean\Touch\LeanTouch.asmdef" />
+     <Compile Include="Assets\3rdParty\Lean\Touch\Extras\LeanFingerUpdate.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Touch\Scripts\LeanGesture.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Touch\Extras\LeanFingerDown.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Touch\Scripts\LeanFinger.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Touch\Examples\Scripts\LeanTouchEvents.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Touch\Extras\LeanSelect.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Touch\Extras\LeanTwistRotateAxis.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Touch\Extras\LeanRoll.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Touch\Examples\Scripts\LeanDestroy.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Touch\Extras\LeanPlane.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Touch\Extras\LeanFingerSwipe.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Touch\Extras\LeanFingerData.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Touch\Examples\Scripts\LeanPulseScale.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Touch\Extras\LeanTwistRotate.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Touch\Examples\Scripts\LeanInfoText.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Touch\Scripts\LeanTouch.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Touch\Extras\LeanDragCamera.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Touch\Extras\LeanPath.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Touch\Extras\LeanSelectable.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Touch\Extras\LeanFingerOld.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Touch\Extras\LeanPinchScale.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Touch\Scripts\LeanSnapshot.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Touch\Extras\LeanSwipeBase.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Touch\Extras\LeanSelectBase.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Touch\Extras\LeanSelectableSpriteRendererColor.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Touch\Extras\LeanFingerTap.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Touch\Extras\LeanFingerFilter.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Touch\Extras\LeanSelectableGraphicColor.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Touch\Extras\LeanDragTranslate.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Touch\Extras\LeanSelectableBehaviour.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Touch\Extras\LeanFingerUp.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Touch\Examples\Scripts\LeanDragTrail.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Touch\Examples\Scripts\LeanSpawn.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Touch\Extras\LeanScreenDepth.cs" />
+     <Compile Include="Assets\3rdParty\Lean\Touch\Extras\LeanSelectableRendererColor.cs" />
+     <None Include="Assets\3rdParty\Lean\Touch\LeanTouch.asmdef" />
  <Reference Include="UnityEditor.UI">
  <HintPath>D:/JAMS/xrigidproject/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
@@ -295,6 +295,27 @@
  </Reference>
  <Reference Include="UnityEditor.WindowsStandalone.Extensions">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.8f1/2020.1.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween">
+ <HintPath>D:/JAMS/xrigidproject/Assets/3rdParty/Demigiant/DOTween/DOTween.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTweenEditor">
+ <HintPath>D:/JAMS/xrigidproject/Assets/3rdParty/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
+ <HintPath>D:/JAMS/xrigidproject/Assets/3rdParty/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
+ </Reference>
+ <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
+ <HintPath>D:/JAMS/xrigidproject/Assets/3rdParty/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
+ </Reference>
+ <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Pdb">
+ <HintPath>D:/JAMS/xrigidproject/Assets/3rdParty/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll</HintPath>
+ </Reference>
+ <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Rocks">
+ <HintPath>D:/JAMS/xrigidproject/Assets/3rdParty/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Rocks.dll</HintPath>
+ </Reference>
+ <Reference Include="Zenject-usage">
+ <HintPath>D:/JAMS/xrigidproject/Assets/3rdParty/Zenject/Source/Usage/Zenject-usage.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.8f1/2020.1.11f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
