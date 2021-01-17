@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class DragGameobject : MonoBehaviour
 {
+    [SerializeField] private LayerMask layerMask;
+
     [SerializeField] private bool lockY;
 
     [SerializeField] private float maxDistance = 10;
- 
 
     [SerializeField] private Rigidbody rigidbody;
 
@@ -33,7 +34,7 @@ public class DragGameobject : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
             {
                 tempPos = hit.point;
             }
