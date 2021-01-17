@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class DragGameobject : MonoBehaviour
 {
+    [SerializeField] private bool lockY;
+
     [SerializeField] private float maxDistance = 10;
+ 
 
     [SerializeField] private Rigidbody rigidbody;
 
@@ -23,25 +26,39 @@ public class DragGameobject : MonoBehaviour
 
     private Vector3 GetMousePosition()
     {
+        if (lockY)
+        {
+            Vector3 tempPos = transform.position;
+
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+            {
+                tempPos = hit.point;
+            }
+            return new Vector3(tempPos.x, transform.position.y, tempPos.z);
+        }
+
         // pixel coordinates
         Vector3 mousePoint = Input.mousePosition;
 
         mousePoint.z = mZCoord;
 
         return Camera.main.ScreenToWorldPoint(mousePoint);
+
     }
 
     private void OnMouseDrag()
     {
-       var result= GetMousePosition() + mouseOffset;
+        var result = GetMousePosition() + mouseOffset;
 
-       var distance = Vector3.Distance(result, Vector3.zero);
+        var distance = Vector3.Distance(result, Vector3.zero);
 
        // calculate distance
         if (distance < maxDistance)
         {
             rigidbody.position = result;
-            Debug.Log("A");
         }
         else
         {

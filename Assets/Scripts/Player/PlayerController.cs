@@ -8,7 +8,7 @@ namespace Player
     {
         public float Spring = 100;
 
-        private SpringJoint[] joints;
+        private HingeJoint[] joints;
 
         public bool IsInputEnabled { get; private set; }
 
@@ -16,11 +16,17 @@ namespace Player
 
         public void Start()
         {
-            joints = GetComponentsInChildren<SpringJoint>().Where(j => !j.connectedBody.CompareTag("Column")).ToArray();
+            joints = GetComponentsInChildren<HingeJoint>();
+
+            var spring = new JointSpring()
+            {
+                spring = Spring
+            };
+
 
             foreach (var joint in joints)
             {
-                joint.spring = Spring;
+                joint.spring = spring;
             }
         }
 
