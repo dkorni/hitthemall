@@ -60,7 +60,7 @@ namespace Game
                     m_level = m_levelContainer.CurrentLevel;
                     m_enemyContainer = m_level.EnemyContainer;
 
-                    m_player.ToggleInput(false);
+                   // m_player.ToggleInput(false);
                     m_enemyContainer.DeactivateAll();
                     m_lockerController.IsLockerSafe.Value = true;
 
@@ -80,7 +80,7 @@ namespace Game
                     break;
                 case GameState.Fail:
                     m_enemyContainer.DeactivateAll();
-                    m_player.ToggleInput(false);
+                //    m_player.ToggleInput(false);
 
                     DOVirtual.DelayedCall(2f,
                         () => Reload(false));
