@@ -2302,6 +2302,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b474b690a1760eb41af156215bc5e45d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 256
+  lockY: 1
   maxDistance: 10
   rigidbody: {fileID: 2035259111401715850}
 --- !u!1 &2035259111413017064
