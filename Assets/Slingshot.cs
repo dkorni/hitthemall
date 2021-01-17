@@ -5,17 +5,24 @@ using UnityEngine;
 
 public class Slingshot : MonoBehaviour
 {
-    public float Spring = 100;
+    [SerializeField]
+    private float _spring = 100;
 
-    private SpringJoint[] joints;
+    [SerializeField]
+    private float _dumper = 100;
+
+    private HingeJoint[] joints;
 
     public void Start()
     {
-        joints = GetComponentsInChildren<SpringJoint>().Where(j=>!j.connectedBody.CompareTag("Column")).ToArray();
+        joints = GetComponentsInChildren<HingeJoint>();
+
+        JointSpring sping = new JointSpring(){ damper = _dumper, spring = _spring};
 
         foreach (var joint in joints)
         {
-            joint.spring = Spring;
+            joint.useSpring = true;
+            joint.spring = sping;
         }
     }
 }

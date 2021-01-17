@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DragGameobject : MonoBehaviour
 {
+    [SerializeField] private float maxDistance = 10;
+
     [SerializeField] private Rigidbody rigidbody;
 
     private Vector3 mouseOffset;
@@ -31,7 +33,32 @@ public class DragGameobject : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        rigidbody.position = GetMousePosition() + mouseOffset;
+       var result= GetMousePosition() + mouseOffset;
+
+       var distance = Vector3.Distance(result, Vector3.zero);
+
+       // calculate distance
+        if (distance < maxDistance)
+        {
+            rigidbody.position = result;
+            Debug.Log("A");
+        }
+        else
+        {
+
+            // find angle 
+            var direction = (Vector3.zero - result).normalized;
+            var angle = Mathf.Atan2(direction.z, direction.x);
+
+            Debug.Log(angle);
+
+            // new correct position
+            var newCorrectX = Mathf.Cos(angle) * maxDistance *-1;
+            var newCorrectZ = Mathf.Sin(angle) * maxDistance *-1;
+
+            var correctPosition = new Vector3(newCorrectX,result.y,newCorrectZ);
+            rigidbody.position = correctPosition;
+        }
     }
 
     private void OnMouseUp()
