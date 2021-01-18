@@ -83,6 +83,7 @@
     <Compile Include="Assets\Low Poly Rocks Pack\Bonus Assets\Scripts\LowPolyRocks_CameraControl.cs" />
     <Compile Include="Assets\Low Poly Rocks Pack\Bonus Assets\Scripts\LowPolyRocks_SunControl.cs" />
     <Compile Include="Assets\Scripts\Leveling\Coin.cs" />
+    <Compile Include="Assets\Scripts\UI\MoneyTextController.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\ToonShader\Shaders\OutlineVC\ToonBumpVC.shader" />

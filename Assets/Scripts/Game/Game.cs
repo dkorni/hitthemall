@@ -23,6 +23,7 @@ namespace Game
 
         [HideInInspector] public ReactiveProperty<GameState> State = new ReactiveProperty<GameState>(GameState.Lobby);
         [HideInInspector] public readonly CompositeDisposable Disposable = new CompositeDisposable();
+        [HideInInspector] public readonly ReactiveProperty<int> CoinsCount = new ReactiveProperty<int>();
 
         [Inject]
         private void Construct(LevelContainer levelContainer, PlayerController playerController,
@@ -44,6 +45,11 @@ namespace Game
             m_lockerController.IsLockerSafe.Subscribe(OnLockerSafetyChanged);
 
             State.Value = GameState.Lobby;
+        }
+
+        public void AddMoney(int amount)
+        {
+            CoinsCount.Value += amount;
         }
 
         private void OnStateChanged(GameState state)

@@ -15,6 +15,7 @@ public class Coin : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Game.Game.Instance.AddMoney(1);
         _rigidbody.AddForce(Vector3.up * _jumpVelocity, ForceMode.Impulse);   
         Destroy(gameObject, _timeToDestroy);
     }
