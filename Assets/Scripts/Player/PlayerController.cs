@@ -32,7 +32,8 @@ namespace Player
 
         public void ToggleInput(bool enable)
         {
-            m_leanDrag.enabled = enable;
+            //todo заменить на выключение DragGameobject
+            //  m_leanDrag.enabled = enable;
             IsInputEnabled = enable;
         }
     }

@@ -11,7 +11,7 @@ namespace Player
 
         private void OnCollisionEnter(Collision other)
         {
-            EnemyController enemy = other.gameObject.GetComponentInParent<EnemyController>();
+            EnemyController enemy = other.gameObject.GetComponent<EnemyController>();
             if (enemy != null)
             {
                 Debug.Log("Kill!");

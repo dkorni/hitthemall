@@ -55,12 +55,17 @@ namespace Game
                 case GameState.Lobby:
                     DOVirtual.DelayedCall(0.3f,
                         () => State.Value = GameState.RoundPrepare);
+
+                    // disable physics btw coins, slingshot and stickmen
+                    Physics.IgnoreLayerCollision(9,10);
+                    Physics.IgnoreLayerCollision(10,11);
+
                     break;
                 case GameState.RoundPrepare:
                     m_level = m_levelContainer.CurrentLevel;
                     m_enemyContainer = m_level.EnemyContainer;
 
-                   // m_player.ToggleInput(false);
+                    // m_player.ToggleInput(false);
                     m_enemyContainer.DeactivateAll();
                     m_lockerController.IsLockerSafe.Value = true;
 

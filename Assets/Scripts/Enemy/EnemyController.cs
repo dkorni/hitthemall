@@ -15,6 +15,7 @@ namespace Enemy
         [SerializeField] private Animator m_animator;
         [SerializeField] private Rigidbody m_pelvisRigid;
         [SerializeField] private Collider m_collider;
+        [SerializeField] private GameObject m_coinPrefab;
 
         [HideInInspector] public ReactiveProperty<bool> IsAlive = new ReactiveProperty<bool>(true);
 
@@ -30,6 +31,8 @@ namespace Enemy
         {
             m_navAgent.enabled = true;
             m_navAgent.destination = m_destination.position;
+
+            m_collider.enabled = true;
         }
 
         public void Deactivate()
@@ -54,6 +57,9 @@ namespace Enemy
             m_animator.enabled = false;
 
             m_pelvisRigid.AddForce(force, ForceMode.VelocityChange);
+
+            // spawn coin
+            Instantiate(m_coinPrefab, transform.position + Vector3.up*1.7f, Quaternion.identity);
         }
     }
 }
