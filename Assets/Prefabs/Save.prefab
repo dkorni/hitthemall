@@ -150,7 +150,7 @@ MonoBehaviour:
   _identifier: 
   _useSceneContext: 0
   _context: {fileID: 0}
-  _bindType: 0
+  _bindType: 2
 --- !u!65 &1880839039
 BoxCollider:
   m_ObjectHideFlags: 0
