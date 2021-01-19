@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DragGameobject : MonoBehaviour
 {
+    [SerializeField] private Rigidbody _slingshot;
+
     [SerializeField] private LayerMask layerMask;
 
     [SerializeField] private bool lockY;
@@ -77,6 +79,17 @@ public class DragGameobject : MonoBehaviour
             var correctPosition = new Vector3(newCorrectX,result.y,newCorrectZ);
             rigidbody.position = correctPosition;
         }
+
+        // rotate slingshot to direction of shooting
+        var forward = result - _slingshot.transform.position;
+        forward.x *= -1;
+        forward.z *= -1;
+
+        var dirRot = Quaternion.LookRotation(forward, Vector3.up).eulerAngles;
+        dirRot.x = 0;
+        dirRot.z = 0;
+
+        _slingshot.rotation = Quaternion.Euler(dirRot);
     }
 
     private void OnMouseUp()

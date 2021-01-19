@@ -12,7 +12,10 @@ namespace Player
 
         public bool IsInputEnabled { get; private set; }
 
+
+        [SerializeField] private Transform m_shot;
         [SerializeField] private LeanDragTranslate m_leanDrag;
+
 
         public void Start()
         {
