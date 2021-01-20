@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,9 +15,20 @@ public class DragGameobject : MonoBehaviour
 
     [SerializeField] private Rigidbody rigidbody;
 
+    [SerializeField]
+    [Range(0.05f, 1.0f)] 
+    private float _pullSpeed = 0.1f;
+
+    private Vector3 _startPosition;
+
     private Vector3 mouseOffset;
 
     private float mZCoord;
+
+    private void Start()
+    {
+        _startPosition = rigidbody.position;
+    }
 
     private void OnMouseDown()
     {
@@ -70,8 +82,6 @@ public class DragGameobject : MonoBehaviour
             var direction = (Vector3.zero - result).normalized;
             var angle = Mathf.Atan2(direction.z, direction.x);
 
-            Debug.Log(angle);
-
             // new correct position
             var newCorrectX = Mathf.Cos(angle) * maxDistance *-1;
             var newCorrectZ = Mathf.Sin(angle) * maxDistance *-1;
@@ -95,5 +105,67 @@ public class DragGameobject : MonoBehaviour
     private void OnMouseUp()
     {
         rigidbody.isKinematic = false;
+        var shootPosition = transform.TransformPoint(Vector3.zero);
+        var shootDistance = Vector3.Distance(_slingshot.position, shootPosition);
+        Debug.Log("Shoot!!!: "+shootDistance);
+        StopAllCoroutines();
+        StartCoroutine(FlyInShoot(shootPosition));
+    }
+
+    // todo refactor
+    private IEnumerator FlyInShoot(Vector3 shootPosition)
+    {
+        var previousDistance = 0f;
+
+        yield return new WaitForFixedUpdate();
+
+        var position = transform.TransformPoint(Vector3.zero);
+        var startDirection = (position - shootPosition).normalized;
+
+        Debug.Log(Math.Sign(startDirection.z));
+
+        // wait until reached center
+        while (true)
+        {
+            position = transform.TransformPoint(Vector3.zero);
+            var direction = (position - shootPosition).normalized;
+
+            // Debug.Log(Math.Sign(direction.z));
+
+            // todo probably optimize
+            if (Mathf.Sign(direction.z) != Mathf.Sign(startDirection.z))
+            {
+                Debug.Log("Comes back at "+transform.position);
+                break;
+            }
+
+            shootPosition = position;
+            Debug.Log(direction);
+
+            yield return null;
+        }
+
+        yield return PullOnSling();
+    }
+
+    private IEnumerator PullOnSling()
+    {
+        rigidbody.isKinematic = true;
+        while (true)
+        {
+            var shootDistance = Vector3.Distance(_startPosition,rigidbody.position);
+
+            if (shootDistance > 0.1)
+            {
+                rigidbody.position = Vector3.Lerp(rigidbody.position, _startPosition, _pullSpeed);
+            }
+
+            else
+            {
+                break;
+            }
+
+            yield return new WaitForFixedUpdate();
+        }
     }
 }
