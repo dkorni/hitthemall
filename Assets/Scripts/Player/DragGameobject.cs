@@ -9,8 +9,6 @@ public class DragGameobject : MonoBehaviour
 
     [SerializeField] private LayerMask layerMask;
 
-    [SerializeField] private bool lockY;
-
     [SerializeField] private float maxDistance = 10;
 
     [SerializeField] private Rigidbody rigidbody;
@@ -23,45 +21,18 @@ public class DragGameobject : MonoBehaviour
 
     private Vector3 mouseOffset;
 
-    private float mZCoord;
-
     private void Start()
     {
         _startPosition = rigidbody.position;
     }
 
+    #region Control
+
     private void OnMouseDown()
     {
-        mZCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
-
         mouseOffset = transform.position - GetMousePosition();
 
         rigidbody.isKinematic = true;
-    }
-
-    private Vector3 GetMousePosition()
-    {
-        if (lockY)
-        {
-            Vector3 tempPos = transform.position;
-
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
-            {
-                tempPos = hit.point;
-            }
-            return new Vector3(tempPos.x, transform.position.y, tempPos.z);
-        }
-
-        // pixel coordinates
-        Vector3 mousePoint = Input.mousePosition;
-
-        mousePoint.z = mZCoord;
-
-        return Camera.main.ScreenToWorldPoint(mousePoint);
-
     }
 
     private void OnMouseDrag()
@@ -70,23 +41,24 @@ public class DragGameobject : MonoBehaviour
 
         var distance = Vector3.Distance(result, Vector3.zero);
 
-       // calculate distance
+        // calculate distance
         if (distance < maxDistance)
         {
             rigidbody.position = result;
         }
         else
         {
+            // clamp position of shot
 
             // find angle 
             var direction = (Vector3.zero - result).normalized;
             var angle = Mathf.Atan2(direction.z, direction.x);
 
             // new correct position
-            var newCorrectX = Mathf.Cos(angle) * maxDistance *-1;
-            var newCorrectZ = Mathf.Sin(angle) * maxDistance *-1;
+            var newCorrectX = Mathf.Cos(angle) * maxDistance * -1;
+            var newCorrectZ = Mathf.Sin(angle) * maxDistance * -1;
 
-            var correctPosition = new Vector3(newCorrectX,result.y,newCorrectZ);
+            var correctPosition = new Vector3(newCorrectX, result.y, newCorrectZ);
             rigidbody.position = correctPosition;
         }
 
@@ -107,22 +79,33 @@ public class DragGameobject : MonoBehaviour
         rigidbody.isKinematic = false;
         var shootPosition = transform.TransformPoint(Vector3.zero);
         var shootDistance = Vector3.Distance(_slingshot.position, shootPosition);
-        Debug.Log("Shoot!!!: "+shootDistance);
-        StopAllCoroutines();
+        Debug.Log("Shoot!!!: " + shootDistance);
         StartCoroutine(FlyInShoot(shootPosition));
     }
 
-    // todo refactor
+    #endregion
+
+    private Vector3 GetMousePosition()
+    {
+        Vector3 tempPos = transform.position;
+
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
+        {
+            tempPos = hit.point;
+        }
+
+        return new Vector3(tempPos.x, transform.position.y, tempPos.z);
+    }
+
     private IEnumerator FlyInShoot(Vector3 shootPosition)
     {
-        var previousDistance = 0f;
-
         yield return new WaitForFixedUpdate();
 
         var position = transform.TransformPoint(Vector3.zero);
         var startDirection = (position - shootPosition).normalized;
-
-        Debug.Log(Math.Sign(startDirection.z));
 
         // wait until reached center
         while (true)
@@ -130,10 +113,8 @@ public class DragGameobject : MonoBehaviour
             position = transform.TransformPoint(Vector3.zero);
             var direction = (position - shootPosition).normalized;
 
-            // Debug.Log(Math.Sign(direction.z));
-
-            // todo probably optimize
-            if (Mathf.Sign(direction.z) != Mathf.Sign(startDirection.z))
+            // whether different completely opposite directions 
+            if (Vector3.Dot(startDirection, direction)<0)
             {
                 Debug.Log("Comes back at "+transform.position);
                 break;
@@ -145,6 +126,7 @@ public class DragGameobject : MonoBehaviour
             yield return null;
         }
 
+        // return shot to start state
         yield return PullOnSling();
     }
 
