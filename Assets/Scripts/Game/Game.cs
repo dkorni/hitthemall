@@ -23,6 +23,7 @@ namespace Game
 
         [HideInInspector] public ReactiveProperty<GameState> State = new ReactiveProperty<GameState>(GameState.Lobby);
         [HideInInspector] public readonly CompositeDisposable Disposable = new CompositeDisposable();
+        [HideInInspector] public readonly ReactiveProperty<int> CoinsCount = new ReactiveProperty<int>();
 
         [Inject]
         private void Construct(LevelContainer levelContainer, PlayerController playerController,
@@ -46,6 +47,11 @@ namespace Game
             State.Value = GameState.Lobby;
         }
 
+        public void AddMoney(int amount)
+        {
+            CoinsCount.Value += amount;
+        }
+
         private void OnStateChanged(GameState state)
         {
             Debug.Log(state);
@@ -55,12 +61,17 @@ namespace Game
                 case GameState.Lobby:
                     DOVirtual.DelayedCall(0.3f,
                         () => State.Value = GameState.RoundPrepare);
+
+                    // disable physics btw coins, slingshot and stickmen
+                    Physics.IgnoreLayerCollision(9,10);
+                    Physics.IgnoreLayerCollision(10,11);
+
                     break;
                 case GameState.RoundPrepare:
                     m_level = m_levelContainer.CurrentLevel;
                     m_enemyContainer = m_level.EnemyContainer;
 
-                    m_player.ToggleInput(false);
+                    // m_player.ToggleInput(false);
                     m_enemyContainer.DeactivateAll();
                     m_lockerController.IsLockerSafe.Value = true;
 
@@ -80,7 +91,7 @@ namespace Game
                     break;
                 case GameState.Fail:
                     m_enemyContainer.DeactivateAll();
-                    m_player.ToggleInput(false);
+                //    m_player.ToggleInput(false);
 
                     DOVirtual.DelayedCall(2f,
                         () => Reload(false));

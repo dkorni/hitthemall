@@ -8,25 +8,35 @@ namespace Player
     {
         public float Spring = 100;
 
-        private SpringJoint[] joints;
+        private HingeJoint[] joints;
 
         public bool IsInputEnabled { get; private set; }
 
+
+        [SerializeField] private Transform m_shot;
         [SerializeField] private LeanDragTranslate m_leanDrag;
+
 
         public void Start()
         {
-            joints = GetComponentsInChildren<SpringJoint>().Where(j => !j.connectedBody.CompareTag("Column")).ToArray();
+            joints = GetComponentsInChildren<HingeJoint>();
+
+            var spring = new JointSpring()
+            {
+                spring = Spring
+            };
+
 
             foreach (var joint in joints)
             {
-                joint.spring = Spring;
+                joint.spring = spring;
             }
         }
 
         public void ToggleInput(bool enable)
         {
-            m_leanDrag.enabled = enable;
+            //todo заменить на выключение DragGameobject
+            //  m_leanDrag.enabled = enable;
             IsInputEnabled = enable;
         }
     }
