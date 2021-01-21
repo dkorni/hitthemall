@@ -74,8 +74,8 @@ Material:
     - _DstBlend: 0
     - _EmisiveMapIntensity: 1
     - _EmisiveMapOn: 0
-    - _FresnelExponent: 5.19
-    - _FresnelIntensity: 1.69
+    - _FresnelExponent: 3.28
+    - _FresnelIntensity: -1.91
     - _FresnelOn: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
