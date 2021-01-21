@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: BasicShot
   m_EditorClassIdentifier: 
   MaxDistance: 10
-  PullSpeed: 0.1
+  PullSpeed: 0.3
