@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
+using Player;
 using UnityEngine;
 
 public class DragGameobject : MonoBehaviour
@@ -9,13 +8,11 @@ public class DragGameobject : MonoBehaviour
 
     [SerializeField] private LayerMask layerMask;
 
-    [SerializeField] private float maxDistance = 10;
-
     [SerializeField] private Rigidbody rigidbody;
 
-    [SerializeField]
-    [Range(0.05f, 1.0f)] 
-    private float _pullSpeed = 0.1f;
+    [SerializeField] private ShotSettings shotSettings;
+
+    [SerializeField] private EnemyDestroyer _enemyDestroyer;
 
     private Vector3 _startPosition;
 
@@ -24,6 +21,7 @@ public class DragGameobject : MonoBehaviour
     private void Start()
     {
         _startPosition = rigidbody.position;
+        _enemyDestroyer.CanDestroy = false;
     }
 
     #region Control
@@ -40,6 +38,8 @@ public class DragGameobject : MonoBehaviour
         var result = GetMousePosition() + mouseOffset;
 
         var distance = Vector3.Distance(result, Vector3.zero);
+
+        var maxDistance = shotSettings.MaxDistance;
 
         // calculate distance
         if (distance < maxDistance)
@@ -77,6 +77,7 @@ public class DragGameobject : MonoBehaviour
     private void OnMouseUp()
     {
         rigidbody.isKinematic = false;
+        _enemyDestroyer.CanDestroy = true;
         var shootPosition = transform.TransformPoint(Vector3.zero);
         var shootDistance = Vector3.Distance(_slingshot.position, shootPosition);
         Debug.Log("Shoot!!!: " + shootDistance);
@@ -117,11 +118,11 @@ public class DragGameobject : MonoBehaviour
             if (Vector3.Dot(startDirection, direction)<0)
             {
                 Debug.Log("Comes back at "+transform.position);
+                _enemyDestroyer.CanDestroy = false;
                 break;
             }
 
             shootPosition = position;
-            Debug.Log(direction);
 
             yield return null;
         }
@@ -139,7 +140,7 @@ public class DragGameobject : MonoBehaviour
 
             if (shootDistance > 0.1)
             {
-                rigidbody.position = Vector3.Lerp(rigidbody.position, _startPosition, _pullSpeed);
+                rigidbody.position = Vector3.Lerp(rigidbody.position, _startPosition, shotSettings.PullSpeed);
             }
 
             else

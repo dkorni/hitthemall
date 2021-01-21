@@ -7,10 +7,15 @@ namespace Player
 {
     public class EnemyDestroyer : MonoBehaviour
     {
+        public bool CanDestroy = false;
+
         [SerializeField] private float m_pushForceMult = 5;
 
         private void OnCollisionEnter(Collision other)
         {
+            if(!CanDestroy)
+                return;
+
             EnemyController enemy = other.gameObject.GetComponent<EnemyController>();
             if (enemy != null)
             {

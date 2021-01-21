@@ -56,7 +56,7 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\DragGameobject.cs" />
+    <Compile Include="Assets\Scripts\Player\DragGameobject.cs" />
     <Compile Include="Assets\GradientSky\Scripts\GradientSkyCamera.cs" />
     <Compile Include="Assets\3rdParty\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
     <Compile Include="Assets\ToonShader\Scripts\VCCalculator.cs" />
@@ -68,9 +68,11 @@
     <Compile Include="Assets\Scripts\Game\GameInstaller.cs" />
     <Compile Include="Assets\3rdParty\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Leveling\Coin.cs" />
     <Compile Include="Assets\Low Poly Rocks Pack\Bonus Assets\Scripts\LowPolyRocks_CloudsControl.cs" />
     <Compile Include="Assets\Scripts\Player\LockerController.cs" />
     <Compile Include="Assets\Scripts\Game\Game.cs" />
+    <Compile Include="Assets\Scripts\UI\MoneyTextController.cs" />
     <Compile Include="Assets\3rdParty\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyController.cs" />
     <Compile Include="Assets\Scripts\Leveling\Level.cs" />
@@ -82,8 +84,7 @@
     <Compile Include="Assets\Slingshot.cs" />
     <Compile Include="Assets\Low Poly Rocks Pack\Bonus Assets\Scripts\LowPolyRocks_CameraControl.cs" />
     <Compile Include="Assets\Low Poly Rocks Pack\Bonus Assets\Scripts\LowPolyRocks_SunControl.cs" />
-    <Compile Include="Assets\Scripts\Leveling\Coin.cs" />
-    <Compile Include="Assets\Scripts\UI\MoneyTextController.cs" />
+    <Compile Include="Assets\Scripts\Game\ShotSettings.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\ToonShader\Shaders\OutlineVC\ToonBumpVC.shader" />
