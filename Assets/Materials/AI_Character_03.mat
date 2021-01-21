@@ -74,8 +74,8 @@ Material:
     - _DstBlend: 0
     - _EmisiveMapIntensity: 1
     - _EmisiveMapOn: 0
-    - _FresnelExponent: 5.19
-    - _FresnelIntensity: 1.69
+    - _FresnelExponent: 3.3
+    - _FresnelIntensity: -1.01
     - _FresnelOn: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -83,7 +83,7 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _OutlineWidth: 0.0005
+    - _OutlineWidth: 0
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -94,8 +94,8 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmisiveMapColor: {r: 0.1245441, g: 1, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FresnelColor: {r: 0.94509804, g: 0.41376293, b: 0.254902, a: 1}
-    - _Highlights: {r: 0.74509805, g: 0.35229045, b: 0.26274508, a: 1}
+    - _FresnelColor: {r: 1, g: 0.16509432, b: 0.3058507, a: 1}
+    - _Highlights: {r: 1, g: 0.18699186, b: 0, a: 1}
     - _MainColor: {r: 1, g: 0.092620224, b: 0, a: 1}
     - _OutlineColor: {r: 0.49019608, g: 0.44157335, b: 0.24313726, a: 1}
     - _Shadows: {r: 0.20558916, g: 0.23156786, b: 0.26415092, a: 1}

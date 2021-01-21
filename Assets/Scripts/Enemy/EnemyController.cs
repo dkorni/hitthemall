@@ -1,29 +1,46 @@
 ﻿using System;
+using Player;
+using UniRx;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
+using Zenject;
 
-namespace Character
+namespace Enemy
 {
     public class EnemyController : MonoBehaviour
     {
-        [SerializeField] private Transform m_destination;
+        private Transform m_destination;
         [SerializeField] private NavMeshAgent m_navAgent;
         [SerializeField] private Animator m_animator;
+        [SerializeField] private Rigidbody m_pelvisRigid;
+        [SerializeField] private Collider m_collider;
+        [SerializeField] private GameObject m_coinPrefab;
 
-        private bool m_isAlive;
+        [HideInInspector] public ReactiveProperty<bool> IsAlive = new ReactiveProperty<bool>(true);
+
         private static readonly int IsDeadAnim = Animator.StringToHash("IsDead");
         private static readonly int SpeedAnim = Animator.StringToHash("Speed");
 
         private void Start()
         {
-            Activate();
+            m_destination = LockerController.Instance.transform;
         }
 
-        private void Activate()
+        public void Activate()
         {
             m_navAgent.enabled = true;
             m_navAgent.destination = m_destination.position;
-            m_isAlive = true;
+
+            m_collider.enabled = true;
+        }
+
+        public void Deactivate()
+        {
+            m_navAgent.enabled = false;
+            m_navAgent.velocity = Vector3.zero;
+
+            m_collider.enabled = false;
         }
 
         private void Update()
@@ -31,12 +48,18 @@ namespace Character
             m_animator.SetFloat(SpeedAnim, m_navAgent.velocity.magnitude);
         }
 
-        public void Kill()
+        public void Kill(Vector3 force)
         {
-            m_navAgent.enabled = false;
-            m_navAgent.velocity = Vector3.zero;
-            m_isAlive = false;
-            m_animator.SetBool(IsDeadAnim, !m_isAlive);
+            Deactivate();
+            IsAlive.Value = false;
+
+            m_animator.SetBool(IsDeadAnim, !IsAlive.Value);
+            m_animator.enabled = false;
+
+            m_pelvisRigid.AddForce(force, ForceMode.VelocityChange);
+
+            // spawn coin
+            Instantiate(m_coinPrefab, transform.position + Vector3.up*1.7f, Quaternion.identity);
         }
     }
 }

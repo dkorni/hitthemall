@@ -59,10 +59,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 121510a87fb3fa244a8549134445931b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_destination: {fileID: 4549492920264438400, guid: a3fe6dee07736aa41ba920b34b47c68f,
-    type: 3}
   m_navAgent: {fileID: 7136795238932231444}
   m_animator: {fileID: 4884873502821663120}
+  m_pelvisRigid: {fileID: 0}
+  m_collider: {fileID: 0}
+  m_coinPrefab: {fileID: 5450083654942889022, guid: 2fb0c12a9354a7241ada2e644700bfb9,
+    type: 3}
+  IsAlive:
+    value: 1
 --- !u!195 &7136795238932231444
 NavMeshAgent:
   m_ObjectHideFlags: 0
