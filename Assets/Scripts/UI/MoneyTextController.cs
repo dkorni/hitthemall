@@ -18,6 +18,6 @@ public class MoneyTextController : MonoBehaviour
 
     private void UpdateText(int amount)
     {
-        _text.text = $"Coins {amount}";
+        _text.text = $"{amount}";
     }
 }
