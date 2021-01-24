@@ -86,6 +86,7 @@
     <Compile Include="Assets\Low Poly Rocks Pack\Bonus Assets\Scripts\LowPolyRocks_CameraControl.cs" />
     <Compile Include="Assets\Low Poly Rocks Pack\Bonus Assets\Scripts\LowPolyRocks_SunControl.cs" />
     <Compile Include="Assets\Scripts\UI\ForceBarController.cs" />
+    <Compile Include="Assets\Scripts\UI\StickamenBar.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\ToonShader\Shaders\OutlineVC\ToonBumpVC.shader" />
