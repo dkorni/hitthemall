@@ -14,14 +14,19 @@ public class DragGameobject : MonoBehaviour
 
     [SerializeField] private EnemyDestroyer _enemyDestroyer;
 
+    [SerializeField] private float _offsetBtwObst = 0.3f;
+
     private Vector3 _startPosition;
 
     private Vector3 mouseOffset;
+
+    private int _ignoreLayerMask;
 
     private void Start()
     {
         _startPosition = rigidbody.position;
         _enemyDestroyer.CanDestroy = false;
+        _ignoreLayerMask = LayerMask.GetMask("Obstacle");
     }
 
     #region Control
@@ -50,16 +55,24 @@ public class DragGameobject : MonoBehaviour
         {
             // clamp position of shot
 
-            // find angle 
-            var direction = (Vector3.zero - result).normalized;
-            var angle = Mathf.Atan2(direction.z, direction.x);
-
-            // new correct position
-            var newCorrectX = Mathf.Cos(angle) * maxDistance * -1;
-            var newCorrectZ = Mathf.Sin(angle) * maxDistance * -1;
-
-            var correctPosition = new Vector3(newCorrectX, result.y, newCorrectZ);
+            var correctPosition = CalculateNewPosition(result, maxDistance);
             rigidbody.position = correctPosition;
+            distance = maxDistance;
+            result = correctPosition;
+        }
+
+        var dirToResult = result - _slingshot.position;
+
+        // check obstacles
+        var obstacleRay = new Ray(_slingshot.position, dirToResult);
+        if (Physics.SphereCast(obstacleRay, 1, out var hit, distance, _ignoreLayerMask))
+        {
+            // new correct position
+            distance = Vector3.Distance(hit.point, _slingshot.position) - _offsetBtwObst;
+
+            var correctPosition = CalculateNewPosition(result, distance);
+            rigidbody.position = correctPosition;
+            result = correctPosition;
         }
 
         // rotate slingshot to direction of shooting
@@ -85,6 +98,20 @@ public class DragGameobject : MonoBehaviour
     }
 
     #endregion
+
+    private Vector3 CalculateNewPosition(Vector3 targetPosition, float distance)
+    {
+
+        // find angle 
+        var direction = (Vector3.zero - targetPosition).normalized;
+        var angle = Mathf.Atan2(direction.z, direction.x);
+
+        // new correct position
+        var newCorrectX = Mathf.Cos(angle) * distance * -1;
+        var newCorrectZ = Mathf.Sin(angle) * distance * -1;
+
+        return new Vector3(newCorrectX, targetPosition.y, newCorrectZ);
+    }
 
     private Vector3 GetMousePosition()
     {
