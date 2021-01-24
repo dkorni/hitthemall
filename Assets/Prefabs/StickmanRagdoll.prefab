@@ -1084,6 +1084,12 @@ PrefabInstance:
       propertyPath: m_collider
       value: 
       objectReference: {fileID: 5655288019875724760}
+    - target: {fileID: 7103464931839733514, guid: fa24a94c9893bf2439f5a60223e044df,
+        type: 3}
+      propertyPath: m_coinPrefab
+      value: 
+      objectReference: {fileID: 5450083654942889022, guid: 464cc729503ab3c4faab0f5d77275b20,
+        type: 3}
     - target: {fileID: 7136795238932231444, guid: fa24a94c9893bf2439f5a60223e044df,
         type: 3}
       propertyPath: m_AutoBraking
