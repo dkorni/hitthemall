@@ -17680,6 +17680,7 @@ GameObject:
   - component: {fileID: 2035259111401715848}
   - component: {fileID: 2035259111401715894}
   - component: {fileID: 2035259111401715895}
+  - component: {fileID: 321105829608304575}
   m_Layer: 9
   m_Name: Bone013
   m_TagString: Untagged
@@ -17793,6 +17794,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b474b690a1760eb41af156215bc5e45d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CurrentPulling:
+    value: 0
   _slingshot: {fileID: 1476884908}
   layerMask:
     serializedVersion: 2
@@ -17801,6 +17804,24 @@ MonoBehaviour:
   shotSettings: {fileID: 11400000, guid: 1a4d3a17977eb5e4ca7278aa59872e98, type: 2}
   _enemyDestroyer: {fileID: 2035259111401715894}
   _offsetBtwObst: 1
+--- !u!114 &321105829608304575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035259111401715892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0166d8ff8d905b048b2448179e1f5d11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _components:
+  - {fileID: 2035259111401715895}
+  _identifier: 
+  _useSceneContext: 0
+  _context: {fileID: 0}
+  _bindType: 0
 --- !u!1 &2035259111413017064
 GameObject:
   m_ObjectHideFlags: 0

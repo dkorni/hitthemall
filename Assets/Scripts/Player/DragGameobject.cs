@@ -1,9 +1,15 @@
 ﻿using System.Collections;
 using Player;
+using UniRx;
 using UnityEngine;
 
 public class DragGameobject : MonoBehaviour
 {
+    /// <summary>
+    /// Pulling returns value in percents. Max distance is 100%. 
+    /// </summary>
+    [HideInInspector] public ReactiveProperty<float> CurrentPulling;
+
     [SerializeField] private Rigidbody _slingshot;
 
     [SerializeField] private LayerMask layerMask;
@@ -75,6 +81,9 @@ public class DragGameobject : MonoBehaviour
             result = correctPosition;
         }
 
+        // pulling calculate
+        CalculatePulling(distance);
+
         // rotate slingshot to direction of shooting
         var forward = result - _slingshot.transform.position;
         forward.x *= -1;
@@ -95,6 +104,7 @@ public class DragGameobject : MonoBehaviour
         var shootDistance = Vector3.Distance(_slingshot.position, shootPosition);
         Debug.Log("Shoot!!!: " + shootDistance);
         StartCoroutine(FlyInShoot(shootPosition));
+        CurrentPulling.Value = 0;
     }
 
     #endregion
@@ -111,6 +121,12 @@ public class DragGameobject : MonoBehaviour
         var newCorrectZ = Mathf.Sin(angle) * distance * -1;
 
         return new Vector3(newCorrectX, targetPosition.y, newCorrectZ);
+    }
+
+    private void CalculatePulling(float distance)
+    {
+        var pulling =  distance * 100 / shotSettings.MaxDistance;
+        CurrentPulling.Value = pulling;
     }
 
     private Vector3 GetMousePosition()
@@ -134,8 +150,7 @@ public class DragGameobject : MonoBehaviour
 
         var position = transform.TransformPoint(Vector3.zero);
         var startDirection = (position - shootPosition).normalized;
-
-        // wait until reached center
+        var stopCalculatingPulling = false;
         while (true)
         {
             position = transform.TransformPoint(Vector3.zero);
