@@ -88,6 +88,9 @@
     <Compile Include="Assets\Low Poly Rocks Pack\Bonus Assets\Scripts\LowPolyRocks_CameraControl.cs" />
     <Compile Include="Assets\Low Poly Rocks Pack\Bonus Assets\Scripts\LowPolyRocks_SunControl.cs" />
     <Compile Include="Assets\Scripts\Game\TreasureBoxController.cs" />
+    <Compile Include="Assets\Scripts\UI\FailPanelController.cs" />
+    <Compile Include="Assets\Scripts\UI\WinController.cs" />
+    <Compile Include="Assets\Scripts\Game\Fire.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\ToonShader\Shaders\OutlineVC\ToonBumpVC.shader" />

@@ -87,19 +87,10 @@ namespace Game
                 case GameState.Win:
                     m_enemyContainer.DeactivateAll();
                     m_player.ToggleInput(false);
-
-                    DOVirtual.DelayedCall(2f,
-                        () => Reload(true));
                     break;
                 case GameState.Fail:
                     m_enemyContainer.DeactivateAll();
-                //    m_player.ToggleInput(false);
-
-                   
-
                     break;
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(state), state, null);
             }
         }
 
@@ -115,7 +106,7 @@ namespace Game
                 State.Value = GameState.Fail;
         }
 
-        private void Reload(bool next)
+        public void Reload(bool next)
         {
             if (next)
                 m_levelContainer.NextLevel();

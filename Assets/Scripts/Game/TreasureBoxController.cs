@@ -52,7 +52,7 @@ public class TreasureBoxController : MonoBehaviour
             _coins[i].SetActive(true);
             yield return new WaitForSeconds(_delayBtwMonets);
 
-            if (i == maxMonets)
+            if (i == maxMonets-1)
             {
                 OnFinished?.Invoke();
                 Close();

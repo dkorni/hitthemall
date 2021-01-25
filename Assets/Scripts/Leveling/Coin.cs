@@ -6,6 +6,9 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
     [SerializeField]
+    private int _amount = 1;
+
+    [SerializeField]
     private float _jumpVelocity = 5;
 
     [SerializeField]
@@ -16,7 +19,7 @@ public class Coin : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Game.Game.Instance.AddMoney(1);
+        Game.Game.Instance.AddMoney(_amount);
         _rigidbody.AddForce(Vector3.up * _jumpVelocity, ForceMode.Impulse);
         DOVirtual.DelayedCall(_timeToDestroy, () => gameObject.SetActive(false));
     }
