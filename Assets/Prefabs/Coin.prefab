@@ -116,7 +116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _amount: 0
   _jumpVelocity: 30
-  _timeToDestroy: 3.5
+  _timeToDestroy: 1.5
   _rigidbody: {fileID: -4500673632096039467}
 --- !u!65 &582692390906969073
 BoxCollider:

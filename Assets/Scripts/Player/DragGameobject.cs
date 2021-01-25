@@ -22,11 +22,17 @@ public class DragGameobject : MonoBehaviour
 
     [SerializeField] private float _offsetBtwObst = 0.3f;
 
+    [SerializeField] private LineRenderer _aimLine;
+
+    [SerializeField] private HingeJoint _hingeJoint;
+
     private Vector3 _startPosition;
 
     private Vector3 mouseOffset;
 
     private int _ignoreLayerMask;
+
+    private float prevDist;
 
     private void Start()
     {
@@ -42,6 +48,7 @@ public class DragGameobject : MonoBehaviour
         mouseOffset = transform.position - GetMousePosition();
 
         rigidbody.isKinematic = true;
+        _aimLine.enabled = true;
     }
 
     private void OnMouseDrag()
@@ -85,9 +92,17 @@ public class DragGameobject : MonoBehaviour
         CalculatePulling(distance);
 
         // rotate slingshot to direction of shooting
-        var forward = result - _slingshot.transform.position;
+        var forward = (result - _slingshot.transform.position).normalized;
         forward.x *= -1;
         forward.z *= -1;
+
+        // it's temp sln, 10.71641f should calculated 
+        // todo magic integers make as constant
+        var aimDist = distance * 10.71641f / 16;
+
+        _aimLine.SetPosition(0, result);
+       _aimLine.SetPosition(1, new Vector3(forward.x * aimDist, transform.position.y,forward.z * aimDist));
+       Debug.Log(distance);
 
         var dirRot = Quaternion.LookRotation(forward, Vector3.up).eulerAngles;
         dirRot.x = 0;
@@ -105,6 +120,7 @@ public class DragGameobject : MonoBehaviour
         Debug.Log("Shoot!!!: " + shootDistance);
         StartCoroutine(FlyInShoot(shootPosition));
         CurrentPulling.Value = 0;
+        _aimLine.enabled = false;
     }
 
     #endregion
