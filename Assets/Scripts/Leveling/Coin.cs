@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class Coin : MonoBehaviour
@@ -16,7 +17,7 @@ public class Coin : MonoBehaviour
     void Start()
     {
         Game.Game.Instance.AddMoney(1);
-        _rigidbody.AddForce(Vector3.up * _jumpVelocity, ForceMode.Impulse);   
-        Destroy(gameObject, _timeToDestroy);
+        _rigidbody.AddForce(Vector3.up * _jumpVelocity, ForceMode.Impulse);
+        DOVirtual.DelayedCall(_timeToDestroy, () => gameObject.SetActive(false));
     }
 }
