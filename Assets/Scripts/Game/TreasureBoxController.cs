@@ -1,10 +1,8 @@
-﻿using System;
+﻿using Game;
+using System;
 using System.Collections;
-using System.Collections.Generic;
-using Game;
 using UniRx;
 using UnityEngine;
-using Zenject;
 using Random = UnityEngine.Random;
 
 public class TreasureBoxController : MonoBehaviour
@@ -23,7 +21,7 @@ public class TreasureBoxController : MonoBehaviour
             ObserveEveryValueChanged(v => v.Value).
             Subscribe(s =>
             {
-                if(s== GameState.Fail)
+                if (s == GameState.Fail)
                     Open();
             });
     }

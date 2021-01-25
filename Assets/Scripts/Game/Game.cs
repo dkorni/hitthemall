@@ -25,6 +25,8 @@ namespace Game
         [HideInInspector] public readonly CompositeDisposable Disposable = new CompositeDisposable();
         [HideInInspector] public readonly ReactiveProperty<int> CoinsCount = new ReactiveProperty<int>();
 
+        [Inject] private TreasureBoxController _boxController;
+
         [Inject]
         private void Construct(LevelContainer levelContainer, PlayerController playerController,
             LockerController lockerController)
@@ -43,7 +45,7 @@ namespace Game
             m_levelContainer.EnemyContainer.IsAllEnemiesDestroyed.Subscribe(OnAllEnemiesDestroyedChange)
                 .AddTo(Disposable);
             m_lockerController.IsLockerSafe.Subscribe(OnLockerSafetyChanged);
-
+            _boxController.OnFinished += () => State.Value = GameState.FailMenu;
             State.Value = GameState.Lobby;
         }
 
@@ -93,8 +95,7 @@ namespace Game
                     m_enemyContainer.DeactivateAll();
                 //    m_player.ToggleInput(false);
 
-                    DOVirtual.DelayedCall(2f,
-                        () => Reload(false));
+                   
 
                     break;
                 default:
@@ -134,6 +135,7 @@ namespace Game
         RoundPrepare,
         Round,
         Win,
-        Fail
+        Fail,
+        FailMenu
     }
 }
