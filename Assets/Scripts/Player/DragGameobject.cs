@@ -1,10 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using Player;
 using UniRx;
 using UnityEngine;
 
 public class DragGameobject : MonoBehaviour
 {
+    public Action OnShoot;
+
     /// <summary>
     /// Pulling returns value in percents. Max distance is 100%. 
     /// </summary>
@@ -102,9 +105,8 @@ public class DragGameobject : MonoBehaviour
 
         _aimLine.SetPosition(0, result);
        _aimLine.SetPosition(1, new Vector3(forward.x * aimDist, transform.position.y,forward.z * aimDist));
-       Debug.Log(distance);
 
-        var dirRot = Quaternion.LookRotation(forward, Vector3.up).eulerAngles;
+       var dirRot = Quaternion.LookRotation(forward, Vector3.up).eulerAngles;
         dirRot.x = 0;
         dirRot.z = 0;
 
@@ -121,6 +123,7 @@ public class DragGameobject : MonoBehaviour
         StartCoroutine(FlyInShoot(shootPosition));
         CurrentPulling.Value = 0;
         _aimLine.enabled = false;
+        OnShoot?.Invoke();
     }
 
     #endregion
