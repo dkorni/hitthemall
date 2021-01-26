@@ -423,6 +423,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_Flat_l_2C_06
       objectReference: {fileID: 0}
+    - target: {fileID: 128662, guid: 8577416477282cf4b86d8ba59aa9cc00, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 153306, guid: 8577416477282cf4b86d8ba59aa9cc00, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 463600, guid: 8577416477282cf4b86d8ba59aa9cc00, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.908034
@@ -507,6 +515,30 @@ PrefabInstance:
     - target: {fileID: 112736, guid: b4ec558bc9bf5864eacec493db9e091c, type: 3}
       propertyPath: m_Name
       value: Rocks_Flat_m_2C_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 112736, guid: b4ec558bc9bf5864eacec493db9e091c, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 123644, guid: b4ec558bc9bf5864eacec493db9e091c, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 145966, guid: b4ec558bc9bf5864eacec493db9e091c, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 162726, guid: b4ec558bc9bf5864eacec493db9e091c, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 163610, guid: b4ec558bc9bf5864eacec493db9e091c, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 196948, guid: b4ec558bc9bf5864eacec493db9e091c, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 487998, guid: b4ec558bc9bf5864eacec493db9e091c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -899,9 +931,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7203794336923240733}
     m_Modifications:
+    - target: {fileID: 127058, guid: 332889af8b1cb744ab3a64c1a4c2482d, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 194732, guid: 332889af8b1cb744ab3a64c1a4c2482d, type: 3}
       propertyPath: m_Name
       value: Rock_Flat_s_2C_10
+      objectReference: {fileID: 0}
+    - target: {fileID: 194732, guid: 332889af8b1cb744ab3a64c1a4c2482d, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 479930, guid: 332889af8b1cb744ab3a64c1a4c2482d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1767,9 +1807,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7203794336923240733}
     m_Modifications:
+    - target: {fileID: 135086, guid: b497fba333af3954b8561905bd1ec50c, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 198970, guid: b497fba333af3954b8561905bd1ec50c, type: 3}
       propertyPath: m_Name
       value: Rock_Flat_m_2C_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 198970, guid: b497fba333af3954b8561905bd1ec50c, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 494324, guid: b497fba333af3954b8561905bd1ec50c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2090,6 +2138,14 @@ PrefabInstance:
     - target: {fileID: 119330, guid: e45feed93e3edb942ab9c19af6e6edcc, type: 3}
       propertyPath: m_Name
       value: Rock_Flat_m_2C_14
+      objectReference: {fileID: 0}
+    - target: {fileID: 119330, guid: e45feed93e3edb942ab9c19af6e6edcc, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 157546, guid: e45feed93e3edb942ab9c19af6e6edcc, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 474748, guid: e45feed93e3edb942ab9c19af6e6edcc, type: 3}
       propertyPath: m_LocalPosition.x
