@@ -47,11 +47,16 @@ namespace Game
             m_lockerController.IsLockerSafe.Subscribe(OnLockerSafetyChanged);
             _boxController.OnFinished += () => State.Value = GameState.FailMenu;
             State.Value = GameState.Lobby;
+
+            //load coins
+            CoinsCount.Value = PlayerPrefs.GetInt("Coins", 995);
         }
 
         public void AddMoney(int amount)
         {
             CoinsCount.Value += amount;
+            PlayerPrefs.SetInt("Coins", CoinsCount.Value);
+            PlayerPrefs.Save();
         }
 
         private void OnStateChanged(GameState state)
