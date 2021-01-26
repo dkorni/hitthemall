@@ -59,18 +59,23 @@
     <Compile Include="Assets\Scripts\Player\DragGameobject.cs" />
     <Compile Include="Assets\GradientSky\Scripts\GradientSkyCamera.cs" />
     <Compile Include="Assets\3rdParty\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
+    <Compile Include="Assets\Scripts\UI\StickamenBar.cs" />
     <Compile Include="Assets\ToonShader\Scripts\VCCalculator.cs" />
+    <Compile Include="Assets\Scripts\UI\FailPanelController.cs" />
     <Compile Include="Assets\Scripts\Leveling\LevelContainer.cs" />
     <Compile Include="Assets\3rdParty\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
+    <Compile Include="Assets\Scripts\UI\WinController.cs" />
     <Compile Include="Assets\GradientSky\Scripts\Common\GradientSkyCommon.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyContainer.cs" />
     <Compile Include="Assets\3rdParty\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
+    <Compile Include="Assets\Scripts\Game\TreasureBoxController.cs" />
     <Compile Include="Assets\Scripts\Game\GameInstaller.cs" />
     <Compile Include="Assets\3rdParty\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Leveling\Coin.cs" />
     <Compile Include="Assets\Low Poly Rocks Pack\Bonus Assets\Scripts\LowPolyRocks_CloudsControl.cs" />
     <Compile Include="Assets\Scripts\Player\LockerController.cs" />
+    <Compile Include="Assets\Scripts\Game\Fire.cs" />
     <Compile Include="Assets\Scripts\Game\Game.cs" />
     <Compile Include="Assets\Scripts\UI\MoneyTextController.cs" />
     <Compile Include="Assets\3rdParty\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
@@ -78,13 +83,16 @@
     <Compile Include="Assets\Scripts\Leveling\Level.cs" />
     <Compile Include="Assets\Scripts\Player\EnemyDestroyer.cs" />
     <Compile Include="Assets\GradientSky\Scripts\GradientSkyObject.cs" />
+    <Compile Include="Assets\Scripts\Game\ShotSettings.cs" />
     <Compile Include="Assets\3rdParty\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
     <Compile Include="Assets\3rdParty\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
     <Compile Include="Assets\Low Poly Rocks Pack\Bonus Assets\Scripts\LowPolyRocks_FireLightControl.cs" />
     <Compile Include="Assets\Slingshot.cs" />
+    <Compile Include="Assets\Scripts\UI\ForceBarController.cs" />
     <Compile Include="Assets\Low Poly Rocks Pack\Bonus Assets\Scripts\LowPolyRocks_CameraControl.cs" />
     <Compile Include="Assets\Low Poly Rocks Pack\Bonus Assets\Scripts\LowPolyRocks_SunControl.cs" />
-    <Compile Include="Assets\Scripts\Game\ShotSettings.cs" />
+    <Compile Include="Assets\Scripts\Game\RateCounter.cs" />
+    <Compile Include="Assets\Scripts\UI\RatePanelController.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\ToonShader\Shaders\OutlineVC\ToonBumpVC.shader" />
