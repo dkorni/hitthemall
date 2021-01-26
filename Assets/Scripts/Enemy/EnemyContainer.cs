@@ -10,6 +10,8 @@ namespace Enemy
 {
     public class EnemyContainer : MonoBehaviour
     {
+        public event Action OnStickmanDied;
+
         private List<EnemyController> m_enemies;
 
         [HideInInspector] public ReactiveProperty<bool> IsAllEnemiesDestroyed = new ReactiveProperty<bool>(false);
@@ -17,7 +19,11 @@ namespace Enemy
         private void Start()
         {
             m_enemies = new List<EnemyController>(GetComponentsInChildren<EnemyController>());
-            m_enemies.ForEach(e => e.IsAlive.Subscribe(RemoveDeadEnemy).AddTo(Game.Game.Instance.Disposable));
+            m_enemies.ForEach(e =>
+            {
+                e.IsAlive.Subscribe(RemoveDeadEnemy).AddTo(Game.Game.Instance.Disposable);
+                e.IsAlive.Subscribe(b=>OnStickmanDied?.Invoke()).AddTo(Game.Game.Instance.Disposable);
+            });
         }
 
         private void RemoveDeadEnemy(bool isAlive)
@@ -36,6 +42,11 @@ namespace Enemy
         public void DeactivateAll()
         {
             m_enemies.ForEach(e => e.Deactivate());
+        }
+
+        public int GetEnemiesCount()
+        {
+            return m_enemies.Count;
         }
     }
 }
