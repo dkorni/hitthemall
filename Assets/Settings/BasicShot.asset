@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd4e749a45f025943bccfa78d5c0635a, type: 3}
   m_Name: BasicShot
   m_EditorClassIdentifier: 
-  MaxDistance: 15
-  PullSpeed: 0.25
+  MaxDistance: 20
+  PullSpeed: 0.35
