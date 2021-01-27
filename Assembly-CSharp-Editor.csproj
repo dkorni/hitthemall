@@ -64,6 +64,19 @@
     <Compile Include="Assets\ToonShader\Editor\ToonDiffuseEditor.cs" />
     <Compile Include="Assets\ToonShader\Editor\ToonBumpDissolveEditor.cs" />
     <Compile Include="Assets\ToonShader\Editor\ToonDiffuseMultiTextureEditor.cs" />
+    <Compile Include="Assets\GameAnalytics\Editor\GA_SignUp.cs" />
+    <Compile Include="Assets\GameAnalytics\Editor\GA_PostprocessBuild.cs" />
+    <Compile Include="Assets\GameAnalytics\Editor\GameAnalyticsInspector.cs" />
+    <Compile Include="Assets\GameAnalytics\Editor\GA_EditorUtilities.cs" />
+    <Compile Include="Assets\GameAnalytics\Editor\GA_Menu.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\Editor\SendProgressionEventActionEditor.cs" />
+    <Compile Include="Assets\GameAnalytics\Editor\GA_AssetPostprocessor.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\Editor\SendResourceEventActionEditor.cs" />
+    <Compile Include="Assets\GameAnalytics\Editor\GA_SettingsInspector.cs" />
+    <Compile Include="Assets\GameAnalytics\Editor\GA_AutoRun.cs" />
+    <Compile Include="Assets\GameAnalytics\Editor\GA_ContinuationManager.cs" />
+    <Compile Include="Assets\GameAnalytics\Editor\GA_UpdateWindow.cs" />
+    <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\Editor\PlayMakerPresenceCheck.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\3rdParty\Demigiant\DOTween\Editor\DOTweenEditor.dll" />
