@@ -39,7 +39,7 @@ ParticleSystem:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1030964671136070}
-  serializedVersion: 7
+  serializedVersion: 6
   lengthInSec: 0.3
   simulationSpeed: 1
   stopAction: 0
@@ -3597,20 +3597,19 @@ ParticleSystem:
     range: {x: 0, y: 1}
   CollisionModule:
     enabled: 0
-    serializedVersion: 4
+    serializedVersion: 3
     type: 0
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
     multiplyColliderForceByCollisionAngle: 1
-    m_Planes:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    plane0: {fileID: 0}
+    plane1: {fileID: 0}
+    plane2: {fileID: 0}
+    plane3: {fileID: 0}
+    plane4: {fileID: 0}
+    plane5: {fileID: 0}
     m_Dampen:
       serializedVersion: 2
       minMaxState: 0
@@ -3784,20 +3783,17 @@ ParticleSystem:
     interiorCollisions: 1
   TriggerModule:
     enabled: 0
-    serializedVersion: 2
+    collisionShape0: {fileID: 0}
+    collisionShape1: {fileID: 0}
+    collisionShape2: {fileID: 0}
+    collisionShape3: {fileID: 0}
+    collisionShape4: {fileID: 0}
+    collisionShape5: {fileID: 0}
     inside: 1
     outside: 0
     enter: 0
     exit: 0
-    colliderQueryMode: 0
     radiusScale: 1
-    primitives:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
   SubModule:
     serializedVersion: 2
     enabled: 0
@@ -4757,7 +4753,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: f60e279a68ed89f41966c8993b9bbc6d, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4843,7 +4838,7 @@ ParticleSystem:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1049885801438896}
-  serializedVersion: 7
+  serializedVersion: 6
   lengthInSec: 0.1
   simulationSpeed: 1
   stopAction: 0
@@ -8383,20 +8378,19 @@ ParticleSystem:
     range: {x: 0, y: 1}
   CollisionModule:
     enabled: 0
-    serializedVersion: 4
+    serializedVersion: 3
     type: 0
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
     multiplyColliderForceByCollisionAngle: 1
-    m_Planes:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    plane0: {fileID: 0}
+    plane1: {fileID: 0}
+    plane2: {fileID: 0}
+    plane3: {fileID: 0}
+    plane4: {fileID: 0}
+    plane5: {fileID: 0}
     m_Dampen:
       serializedVersion: 2
       minMaxState: 0
@@ -8570,20 +8564,17 @@ ParticleSystem:
     interiorCollisions: 1
   TriggerModule:
     enabled: 0
-    serializedVersion: 2
+    collisionShape0: {fileID: 0}
+    collisionShape1: {fileID: 0}
+    collisionShape2: {fileID: 0}
+    collisionShape3: {fileID: 0}
+    collisionShape4: {fileID: 0}
+    collisionShape5: {fileID: 0}
     inside: 1
     outside: 0
     enter: 0
     exit: 0
-    colliderQueryMode: 0
     radiusScale: 1
-    primitives:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
   SubModule:
     serializedVersion: 2
     enabled: 1
@@ -9525,7 +9516,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: f60e279a68ed89f41966c8993b9bbc6d, type: 2}
-  - {fileID: 2100000, guid: f60e279a68ed89f41966c8993b9bbc6d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9610,7 +9600,7 @@ ParticleSystem:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1073617029077372}
-  serializedVersion: 7
+  serializedVersion: 6
   lengthInSec: 0.3
   simulationSpeed: 1
   stopAction: 0
@@ -13168,20 +13158,19 @@ ParticleSystem:
     range: {x: 0, y: 1}
   CollisionModule:
     enabled: 0
-    serializedVersion: 4
+    serializedVersion: 3
     type: 0
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
     multiplyColliderForceByCollisionAngle: 1
-    m_Planes:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    plane0: {fileID: 0}
+    plane1: {fileID: 0}
+    plane2: {fileID: 0}
+    plane3: {fileID: 0}
+    plane4: {fileID: 0}
+    plane5: {fileID: 0}
     m_Dampen:
       serializedVersion: 2
       minMaxState: 0
@@ -13355,20 +13344,17 @@ ParticleSystem:
     interiorCollisions: 1
   TriggerModule:
     enabled: 0
-    serializedVersion: 2
+    collisionShape0: {fileID: 0}
+    collisionShape1: {fileID: 0}
+    collisionShape2: {fileID: 0}
+    collisionShape3: {fileID: 0}
+    collisionShape4: {fileID: 0}
+    collisionShape5: {fileID: 0}
     inside: 1
     outside: 0
     enter: 0
     exit: 0
-    colliderQueryMode: 0
     radiusScale: 1
-    primitives:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
   SubModule:
     serializedVersion: 2
     enabled: 0
@@ -14328,7 +14314,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: f60e279a68ed89f41966c8993b9bbc6d, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14414,7 +14399,7 @@ ParticleSystem:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1300197994318514}
-  serializedVersion: 7
+  serializedVersion: 6
   lengthInSec: 0.1
   simulationSpeed: 1
   stopAction: 0
@@ -17954,20 +17939,19 @@ ParticleSystem:
     range: {x: 0, y: 1}
   CollisionModule:
     enabled: 0
-    serializedVersion: 4
+    serializedVersion: 3
     type: 0
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
     multiplyColliderForceByCollisionAngle: 1
-    m_Planes:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    plane0: {fileID: 0}
+    plane1: {fileID: 0}
+    plane2: {fileID: 0}
+    plane3: {fileID: 0}
+    plane4: {fileID: 0}
+    plane5: {fileID: 0}
     m_Dampen:
       serializedVersion: 2
       minMaxState: 0
@@ -18141,20 +18125,17 @@ ParticleSystem:
     interiorCollisions: 1
   TriggerModule:
     enabled: 0
-    serializedVersion: 2
+    collisionShape0: {fileID: 0}
+    collisionShape1: {fileID: 0}
+    collisionShape2: {fileID: 0}
+    collisionShape3: {fileID: 0}
+    collisionShape4: {fileID: 0}
+    collisionShape5: {fileID: 0}
     inside: 1
     outside: 0
     enter: 0
     exit: 0
-    colliderQueryMode: 0
     radiusScale: 1
-    primitives:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
   SubModule:
     serializedVersion: 2
     enabled: 1
@@ -19096,7 +19077,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: f60e279a68ed89f41966c8993b9bbc6d, type: 2}
-  - {fileID: 2100000, guid: f60e279a68ed89f41966c8993b9bbc6d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19181,7 +19161,7 @@ ParticleSystem:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1308382090952820}
-  serializedVersion: 7
+  serializedVersion: 6
   lengthInSec: 0.3
   simulationSpeed: 1
   stopAction: 0
@@ -22739,20 +22719,19 @@ ParticleSystem:
     range: {x: 0, y: 1}
   CollisionModule:
     enabled: 0
-    serializedVersion: 4
+    serializedVersion: 3
     type: 0
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
     multiplyColliderForceByCollisionAngle: 1
-    m_Planes:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    plane0: {fileID: 0}
+    plane1: {fileID: 0}
+    plane2: {fileID: 0}
+    plane3: {fileID: 0}
+    plane4: {fileID: 0}
+    plane5: {fileID: 0}
     m_Dampen:
       serializedVersion: 2
       minMaxState: 0
@@ -22926,20 +22905,17 @@ ParticleSystem:
     interiorCollisions: 1
   TriggerModule:
     enabled: 0
-    serializedVersion: 2
+    collisionShape0: {fileID: 0}
+    collisionShape1: {fileID: 0}
+    collisionShape2: {fileID: 0}
+    collisionShape3: {fileID: 0}
+    collisionShape4: {fileID: 0}
+    collisionShape5: {fileID: 0}
     inside: 1
     outside: 0
     enter: 0
     exit: 0
-    colliderQueryMode: 0
     radiusScale: 1
-    primitives:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
   SubModule:
     serializedVersion: 2
     enabled: 0
@@ -23899,7 +23875,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: f60e279a68ed89f41966c8993b9bbc6d, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -23972,7 +23947,7 @@ Transform:
   m_GameObject: {fileID: 1409968672170726}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1.0000005, z: 1.0000005}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 4261098456828354}
   m_Father: {fileID: 4035501241395850}
@@ -23985,7 +23960,7 @@ ParticleSystem:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1409968672170726}
-  serializedVersion: 7
+  serializedVersion: 6
   lengthInSec: 0.1
   simulationSpeed: 1
   stopAction: 0
@@ -27467,20 +27442,19 @@ ParticleSystem:
     range: {x: 0, y: 1}
   CollisionModule:
     enabled: 0
-    serializedVersion: 4
+    serializedVersion: 3
     type: 0
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
     multiplyColliderForceByCollisionAngle: 1
-    m_Planes:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    plane0: {fileID: 0}
+    plane1: {fileID: 0}
+    plane2: {fileID: 0}
+    plane3: {fileID: 0}
+    plane4: {fileID: 0}
+    plane5: {fileID: 0}
     m_Dampen:
       serializedVersion: 2
       minMaxState: 0
@@ -27654,20 +27628,17 @@ ParticleSystem:
     interiorCollisions: 1
   TriggerModule:
     enabled: 0
-    serializedVersion: 2
+    collisionShape0: {fileID: 0}
+    collisionShape1: {fileID: 0}
+    collisionShape2: {fileID: 0}
+    collisionShape3: {fileID: 0}
+    collisionShape4: {fileID: 0}
+    collisionShape5: {fileID: 0}
     inside: 1
     outside: 0
     enter: 0
     exit: 0
-    colliderQueryMode: 0
     radiusScale: 1
-    primitives:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
   SubModule:
     serializedVersion: 2
     enabled: 1
@@ -28637,7 +28608,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: f60e279a68ed89f41966c8993b9bbc6d, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28710,7 +28680,7 @@ Transform:
   m_GameObject: {fileID: 1462317216605906}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0.1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 4328963035857818}
   - {fileID: 4836457049854856}
@@ -28726,7 +28696,7 @@ ParticleSystem:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1462317216605906}
-  serializedVersion: 7
+  serializedVersion: 6
   lengthInSec: 0.1
   simulationSpeed: 1
   stopAction: 0
@@ -32208,20 +32178,19 @@ ParticleSystem:
     range: {x: 0, y: 1}
   CollisionModule:
     enabled: 0
-    serializedVersion: 4
+    serializedVersion: 3
     type: 0
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
     multiplyColliderForceByCollisionAngle: 1
-    m_Planes:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    plane0: {fileID: 0}
+    plane1: {fileID: 0}
+    plane2: {fileID: 0}
+    plane3: {fileID: 0}
+    plane4: {fileID: 0}
+    plane5: {fileID: 0}
     m_Dampen:
       serializedVersion: 2
       minMaxState: 0
@@ -32395,20 +32364,17 @@ ParticleSystem:
     interiorCollisions: 1
   TriggerModule:
     enabled: 0
-    serializedVersion: 2
+    collisionShape0: {fileID: 0}
+    collisionShape1: {fileID: 0}
+    collisionShape2: {fileID: 0}
+    collisionShape3: {fileID: 0}
+    collisionShape4: {fileID: 0}
+    collisionShape5: {fileID: 0}
     inside: 1
     outside: 0
     enter: 0
     exit: 0
-    colliderQueryMode: 0
     radiusScale: 1
-    primitives:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
   SubModule:
     serializedVersion: 2
     enabled: 1
@@ -33378,7 +33344,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: f60e279a68ed89f41966c8993b9bbc6d, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33451,7 +33416,7 @@ Transform:
   m_GameObject: {fileID: 1863640709281978}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1.0000002, z: 1.0000002}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 4555667349528414}
   m_Father: {fileID: 4035501241395850}
@@ -33464,7 +33429,7 @@ ParticleSystem:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1863640709281978}
-  serializedVersion: 7
+  serializedVersion: 6
   lengthInSec: 0.1
   simulationSpeed: 1
   stopAction: 0
@@ -37004,20 +36969,19 @@ ParticleSystem:
     range: {x: 0, y: 1}
   CollisionModule:
     enabled: 0
-    serializedVersion: 4
+    serializedVersion: 3
     type: 0
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
     multiplyColliderForceByCollisionAngle: 1
-    m_Planes:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    plane0: {fileID: 0}
+    plane1: {fileID: 0}
+    plane2: {fileID: 0}
+    plane3: {fileID: 0}
+    plane4: {fileID: 0}
+    plane5: {fileID: 0}
     m_Dampen:
       serializedVersion: 2
       minMaxState: 0
@@ -37191,20 +37155,17 @@ ParticleSystem:
     interiorCollisions: 1
   TriggerModule:
     enabled: 0
-    serializedVersion: 2
+    collisionShape0: {fileID: 0}
+    collisionShape1: {fileID: 0}
+    collisionShape2: {fileID: 0}
+    collisionShape3: {fileID: 0}
+    collisionShape4: {fileID: 0}
+    collisionShape5: {fileID: 0}
     inside: 1
     outside: 0
     enter: 0
     exit: 0
-    colliderQueryMode: 0
     radiusScale: 1
-    primitives:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
   SubModule:
     serializedVersion: 2
     enabled: 1
@@ -38146,7 +38107,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: f60e279a68ed89f41966c8993b9bbc6d, type: 2}
-  - {fileID: 2100000, guid: f60e279a68ed89f41966c8993b9bbc6d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -38219,7 +38179,7 @@ Transform:
   m_GameObject: {fileID: 1888672002504970}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1.0000005, z: 1.0000005}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 4003176550852214}
   m_Father: {fileID: 4035501241395850}
@@ -38232,7 +38192,7 @@ ParticleSystem:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1888672002504970}
-  serializedVersion: 7
+  serializedVersion: 6
   lengthInSec: 0.1
   simulationSpeed: 1
   stopAction: 0
@@ -41714,20 +41674,19 @@ ParticleSystem:
     range: {x: 0, y: 1}
   CollisionModule:
     enabled: 0
-    serializedVersion: 4
+    serializedVersion: 3
     type: 0
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
     multiplyColliderForceByCollisionAngle: 1
-    m_Planes:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    plane0: {fileID: 0}
+    plane1: {fileID: 0}
+    plane2: {fileID: 0}
+    plane3: {fileID: 0}
+    plane4: {fileID: 0}
+    plane5: {fileID: 0}
     m_Dampen:
       serializedVersion: 2
       minMaxState: 0
@@ -41901,20 +41860,17 @@ ParticleSystem:
     interiorCollisions: 1
   TriggerModule:
     enabled: 0
-    serializedVersion: 2
+    collisionShape0: {fileID: 0}
+    collisionShape1: {fileID: 0}
+    collisionShape2: {fileID: 0}
+    collisionShape3: {fileID: 0}
+    collisionShape4: {fileID: 0}
+    collisionShape5: {fileID: 0}
     inside: 1
     outside: 0
     enter: 0
     exit: 0
-    colliderQueryMode: 0
     radiusScale: 1
-    primitives:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
   SubModule:
     serializedVersion: 2
     enabled: 1
@@ -42884,7 +42840,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: f60e279a68ed89f41966c8993b9bbc6d, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -42957,7 +42912,7 @@ Transform:
   m_GameObject: {fileID: 1928684906571980}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 4943837647631462}
   m_Father: {fileID: 4035501241395850}
@@ -42970,7 +42925,7 @@ ParticleSystem:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1928684906571980}
-  serializedVersion: 7
+  serializedVersion: 6
   lengthInSec: 0.1
   simulationSpeed: 1
   stopAction: 0
@@ -46452,20 +46407,19 @@ ParticleSystem:
     range: {x: 0, y: 1}
   CollisionModule:
     enabled: 0
-    serializedVersion: 4
+    serializedVersion: 3
     type: 0
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
     multiplyColliderForceByCollisionAngle: 1
-    m_Planes:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    plane0: {fileID: 0}
+    plane1: {fileID: 0}
+    plane2: {fileID: 0}
+    plane3: {fileID: 0}
+    plane4: {fileID: 0}
+    plane5: {fileID: 0}
     m_Dampen:
       serializedVersion: 2
       minMaxState: 0
@@ -46639,20 +46593,17 @@ ParticleSystem:
     interiorCollisions: 1
   TriggerModule:
     enabled: 0
-    serializedVersion: 2
+    collisionShape0: {fileID: 0}
+    collisionShape1: {fileID: 0}
+    collisionShape2: {fileID: 0}
+    collisionShape3: {fileID: 0}
+    collisionShape4: {fileID: 0}
+    collisionShape5: {fileID: 0}
     inside: 1
     outside: 0
     enter: 0
     exit: 0
-    colliderQueryMode: 0
     radiusScale: 1
-    primitives:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
   SubModule:
     serializedVersion: 2
     enabled: 1
@@ -47622,7 +47573,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: f60e279a68ed89f41966c8993b9bbc6d, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -47707,7 +47657,7 @@ ParticleSystem:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1948700926776506}
-  serializedVersion: 7
+  serializedVersion: 6
   lengthInSec: 0.3
   simulationSpeed: 1
   stopAction: 0
@@ -51265,20 +51215,19 @@ ParticleSystem:
     range: {x: 0, y: 1}
   CollisionModule:
     enabled: 0
-    serializedVersion: 4
+    serializedVersion: 3
     type: 0
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
     multiplyColliderForceByCollisionAngle: 1
-    m_Planes:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    plane0: {fileID: 0}
+    plane1: {fileID: 0}
+    plane2: {fileID: 0}
+    plane3: {fileID: 0}
+    plane4: {fileID: 0}
+    plane5: {fileID: 0}
     m_Dampen:
       serializedVersion: 2
       minMaxState: 0
@@ -51452,20 +51401,17 @@ ParticleSystem:
     interiorCollisions: 1
   TriggerModule:
     enabled: 0
-    serializedVersion: 2
+    collisionShape0: {fileID: 0}
+    collisionShape1: {fileID: 0}
+    collisionShape2: {fileID: 0}
+    collisionShape3: {fileID: 0}
+    collisionShape4: {fileID: 0}
+    collisionShape5: {fileID: 0}
     inside: 1
     outside: 0
     enter: 0
     exit: 0
-    colliderQueryMode: 0
     radiusScale: 1
-    primitives:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
   SubModule:
     serializedVersion: 2
     enabled: 0
@@ -52425,7 +52371,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: f60e279a68ed89f41966c8993b9bbc6d, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -52511,7 +52456,7 @@ ParticleSystem:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970762867569084}
-  serializedVersion: 7
+  serializedVersion: 6
   lengthInSec: 0.1
   simulationSpeed: 1
   stopAction: 0
@@ -56051,20 +55996,19 @@ ParticleSystem:
     range: {x: 0, y: 1}
   CollisionModule:
     enabled: 0
-    serializedVersion: 4
+    serializedVersion: 3
     type: 0
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
     multiplyColliderForceByCollisionAngle: 1
-    m_Planes:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    plane0: {fileID: 0}
+    plane1: {fileID: 0}
+    plane2: {fileID: 0}
+    plane3: {fileID: 0}
+    plane4: {fileID: 0}
+    plane5: {fileID: 0}
     m_Dampen:
       serializedVersion: 2
       minMaxState: 0
@@ -56238,20 +56182,17 @@ ParticleSystem:
     interiorCollisions: 1
   TriggerModule:
     enabled: 0
-    serializedVersion: 2
+    collisionShape0: {fileID: 0}
+    collisionShape1: {fileID: 0}
+    collisionShape2: {fileID: 0}
+    collisionShape3: {fileID: 0}
+    collisionShape4: {fileID: 0}
+    collisionShape5: {fileID: 0}
     inside: 1
     outside: 0
     enter: 0
     exit: 0
-    colliderQueryMode: 0
     radiusScale: 1
-    primitives:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
   SubModule:
     serializedVersion: 2
     enabled: 1
@@ -57192,7 +57133,6 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f60e279a68ed89f41966c8993b9bbc6d, type: 2}
   - {fileID: 2100000, guid: f60e279a68ed89f41966c8993b9bbc6d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0

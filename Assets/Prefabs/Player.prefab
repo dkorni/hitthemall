@@ -2651,10 +2651,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 150
+  m_Radius: 160
   m_Height: 1
   m_Direction: 1
-  m_Center: {x: 0, y: -24.5, z: -37.64}
+  m_Center: {x: 0, y: -24.5, z: 0.1}
 --- !u!59 &2035259111401715848
 HingeJoint:
   m_ObjectHideFlags: 0
