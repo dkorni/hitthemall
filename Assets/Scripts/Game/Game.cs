@@ -15,6 +15,7 @@ namespace Game
     public class Game : MonoBehaviour, IInitializable, IDisposable
     {
         public static Game Instance;
+        public static int ReloadCount { get; private set; }
 
         private LevelContainer m_levelContainer;
         private Level m_level;
@@ -60,7 +61,9 @@ namespace Game
             CoinsCount.Value += amount;
             PlayerPrefs.SetInt("Coins", CoinsCount.Value);
             PlayerPrefs.Save();
-            GameAnalytics.NewResourceEvent(GAResourceFlowType.Source, "1", 1, "Coins", "1");
+
+            // todo
+          //  GameAnalytics.NewResourceEvent(GAResourceFlowType.Source, "1", 1, "Coins", "1");
         }
 
         private void OnStateChanged(GameState state)
@@ -123,6 +126,8 @@ namespace Game
         {
             if (next)
                 m_levelContainer.NextLevel();
+
+            ReloadCount++;
             SceneManager.LoadScene("SampleScene");
         }
 

@@ -77,6 +77,7 @@
     <Compile Include="Assets\GameAnalytics\Editor\GA_ContinuationManager.cs" />
     <Compile Include="Assets\GameAnalytics\Editor\GA_UpdateWindow.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\Editor\PlayMakerPresenceCheck.cs" />
+    <Compile Include="Assets\StoreScreenshot\Editor\StoreScreenshot.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\3rdParty\Demigiant\DOTween\Editor\DOTweenEditor.dll" />
