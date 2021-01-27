@@ -86,8 +86,6 @@ namespace Game
                     m_enemyContainer.DeactivateAll();
                     m_lockerController.IsLockerSafe.Value = true;
 
-                    DOVirtual.DelayedCall(2f,
-                        () => State.Value = GameState.Round);
                     break;
                 case GameState.Round:
                     GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, "Game",
