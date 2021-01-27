@@ -130,6 +130,8 @@
     <Compile Include="Assets\Low Poly Rocks Pack\Bonus Assets\Scripts\LowPolyRocks_SunControl.cs" />
     <Compile Include="Assets\Scripts\UI\StartController.cs" />
     <Compile Include="Assets\Scripts\UI\Prompt.cs" />
+    <Compile Include="Assets\StoreScreenshot\StoreScreenshotUtils.cs" />
+    <Compile Include="Assets\StoreScreenshot\GenerateScreenshot.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\GameAnalytics\Readme.txt" />

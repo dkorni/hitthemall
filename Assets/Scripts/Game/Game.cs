@@ -60,7 +60,9 @@ namespace Game
             CoinsCount.Value += amount;
             PlayerPrefs.SetInt("Coins", CoinsCount.Value);
             PlayerPrefs.Save();
-            GameAnalytics.NewResourceEvent(GAResourceFlowType.Source, "1", 1, "Coins", "1");
+
+            // todo
+          //  GameAnalytics.NewResourceEvent(GAResourceFlowType.Source, "1", 1, "Coins", "1");
         }
 
         private void OnStateChanged(GameState state)
