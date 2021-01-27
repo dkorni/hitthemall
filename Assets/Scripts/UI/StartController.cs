@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Zenject;
 
 public class StartController : MonoBehaviour
@@ -12,7 +13,7 @@ public class StartController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (LevelContainer.CurrentLevelIndex != 0)
+        if (Game.Game.ReloadCount != 0)
         {
             gameObject.SetActive(false);
             return;

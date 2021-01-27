@@ -15,6 +15,7 @@ namespace Game
     public class Game : MonoBehaviour, IInitializable, IDisposable
     {
         public static Game Instance;
+        public static int ReloadCount { get; private set; }
 
         private LevelContainer m_levelContainer;
         private Level m_level;
@@ -125,6 +126,8 @@ namespace Game
         {
             if (next)
                 m_levelContainer.NextLevel();
+
+            ReloadCount++;
             SceneManager.LoadScene("SampleScene");
         }
 
