@@ -1,14 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Leveling;
+﻿using Leveling;
 using UnityEngine;
 using Zenject;
 
 public class RateCounter : MonoBehaviour
 {
-    [SerializeField] private Vector2 _highRate;
-    [SerializeField] private Vector2 _middleRate;
-    [SerializeField] private Vector2 _lowRate;
+    private int _maxEnemies;
+
+    private const int _highShootRate = 5;
+    private const int _middleShootRate = 7;
+    private const int _lowShootRate = 9;
 
     [SerializeField] private LevelContainer _levelContainer;
 
@@ -21,25 +21,37 @@ public class RateCounter : MonoBehaviour
     void Start()
     {
         var container = _levelContainer.CurrentLevel.EnemyContainer;
-        container.OnStickmanDied += ()=>_killedCount++;
+        container.OnStickmanDied += () => _killedCount++;
         _dragGameobject.OnShoot += () => _shootCount++;
+        _maxEnemies = container.GetEnemiesCount();
     }
 
     public int CalculateRate()
     {
         int result = 0;
 
-        if (_killedCount >= _highRate.x && _shootCount >= _highRate.y)
+        if (_killedCount >= _maxEnemies && _shootCount == _maxEnemies)
+        {
             result = 3;
+            return result;
+        }
 
-        if (_killedCount >= _middleRate.x && _shootCount >= _middleRate.y)
+        _shootCount = _shootCount < _middleShootRate ? _shootCount + (_middleShootRate - _shootCount) : _shootCount;
+
+        if (_killedCount >= _maxEnemies && _shootCount <= _middleShootRate)
+        {
             result = 2;
+            return result;
+        }
 
-        if (_killedCount >= _lowRate.x && _shootCount >= _lowRate.y)
+        _shootCount = _shootCount < _lowShootRate ? _shootCount + (_lowShootRate - _shootCount) : _shootCount;
+
+        if (_killedCount >= _maxEnemies && _shootCount >= _lowShootRate)
+        {
             result = 1;
+            return result;
+        }
 
-        Debug.Log($"Rating: {result}");
-
-        return result;
+        return 0;
     }
 }
