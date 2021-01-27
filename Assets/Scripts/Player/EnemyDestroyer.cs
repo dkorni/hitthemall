@@ -2,6 +2,7 @@
 using Enemy;
 using UnityEngine;
 using UnityEngine.Events;
+using Zenject;
 
 namespace Player
 {
@@ -9,6 +10,7 @@ namespace Player
     {
         public bool CanDestroy = false;
 
+        [Inject] private EffectPool effectPool;
         [SerializeField] private float m_pushForceMult = 5;
 
         private void OnCollisionEnter(Collision other)
@@ -24,6 +26,9 @@ namespace Player
                 vel.y += 5;
 
                 enemy.Kill(vel.normalized * m_pushForceMult);
+                var hitEffect =  effectPool.Take();
+                hitEffect.transform.position = enemy.m_pelvisRigid.position;
+                hitEffect.GetComponent<ParticleSystem>().Play();
             }
         }
     }

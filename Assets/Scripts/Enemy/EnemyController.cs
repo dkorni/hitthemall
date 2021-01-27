@@ -13,7 +13,7 @@ namespace Enemy
         private Transform m_destination;
         [SerializeField] private NavMeshAgent m_navAgent;
         [SerializeField] private Animator m_animator;
-        [SerializeField] private Rigidbody m_pelvisRigid;
+         public Rigidbody m_pelvisRigid;
         [SerializeField] private Collider m_collider;
         [SerializeField] private GameObject m_coinPrefab;
 

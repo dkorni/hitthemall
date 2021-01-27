@@ -106,18 +106,21 @@
     <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Wrapper\GA_Wrapper.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Resource.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\IsRemoteConfigsReady.cs" />
+    <Compile Include="Assets\StoreScreenshot\StoreScreenshotUtils.cs" />
     <Compile Include="Assets\Scripts\Leveling\Level.cs" />
     <Compile Include="Assets\Scripts\Player\EnemyDestroyer.cs" />
     <Compile Include="Assets\GradientSky\Scripts\GradientSkyObject.cs" />
     <Compile Include="Assets\Scripts\Game\ShotSettings.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Wrapper\GA_tvOSWrapper.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GAValidator.cs" />
+    <Compile Include="Assets\Scripts\UI\Prompt.cs" />
     <Compile Include="Assets\3rdParty\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Setup\Settings.cs" />
     <Compile Include="Assets\3rdParty\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\GAInitialize.cs" />
     <Compile Include="Assets\Low Poly Rocks Pack\Bonus Assets\Scripts\LowPolyRocks_FireLightControl.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_SpecialEvents.cs" />
+    <Compile Include="Assets\StoreScreenshot\GenerateScreenshot.cs" />
     <Compile Include="Assets\Slingshot.cs" />
     <Compile Include="Assets\Scripts\UI\ForceBarController.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Mopub\GAMopubIntegration.cs" />
@@ -127,11 +130,10 @@
     <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SendErrorEvent.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Progression.cs" />
     <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SetCustomDimension.cs" />
-    <Compile Include="Assets\Low Poly Rocks Pack\Bonus Assets\Scripts\LowPolyRocks_SunControl.cs" />
     <Compile Include="Assets\Scripts\UI\StartController.cs" />
-    <Compile Include="Assets\Scripts\UI\Prompt.cs" />
-    <Compile Include="Assets\StoreScreenshot\StoreScreenshotUtils.cs" />
-    <Compile Include="Assets\StoreScreenshot\GenerateScreenshot.cs" />
+    <Compile Include="Assets\Low Poly Rocks Pack\Bonus Assets\Scripts\LowPolyRocks_SunControl.cs" />
+    <Compile Include="Assets\Scripts\CFX_AutoDestructShuriken.cs" />
+    <Compile Include="Assets\Scripts\Game\EffectPool.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\GameAnalytics\Readme.txt" />
@@ -712,8 +714,14 @@
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Recorder.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Recorder.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Recorder">
+      <HintPath>Library\ScriptAssemblies\Unity.Recorder.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
@@ -723,6 +731,9 @@
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Recorder.Base">
+      <HintPath>Library\ScriptAssemblies\Unity.Recorder.Base.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
