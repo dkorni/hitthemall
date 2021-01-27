@@ -6,7 +6,9 @@ using UnityEngine;
 
 public class DragGameobject : MonoBehaviour
 {
-    public Action OnShoot;
+    public event Action OnShoot;
+
+    public event Action OnStartShoot;
 
     /// <summary>
     /// Pulling returns value in percents. Max distance is 100%. 
@@ -48,6 +50,11 @@ public class DragGameobject : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if(!enabled)
+            return;
+
+        OnStartShoot?.Invoke();
+
         mouseOffset = transform.position - GetMousePosition();
 
         rigidbody.isKinematic = true;
@@ -56,6 +63,9 @@ public class DragGameobject : MonoBehaviour
 
     private void OnMouseDrag()
     {
+        if (!enabled)
+            return;
+
         var result = GetMousePosition() + mouseOffset;
 
         var distance = Vector3.Distance(result, Vector3.zero);
@@ -115,6 +125,9 @@ public class DragGameobject : MonoBehaviour
 
     private void OnMouseUp()
     {
+        if (!enabled)
+            return;
+
         rigidbody.isKinematic = false;
         _enemyDestroyer.CanDestroy = true;
         var shootPosition = transform.TransformPoint(Vector3.zero);

@@ -2,6 +2,7 @@
 using System.Runtime.InteropServices;
 using DG.Tweening;
 using Enemy;
+using GameAnalyticsSDK;
 using Leveling;
 using Player;
 using UniRx;
@@ -14,6 +15,7 @@ namespace Game
     public class Game : MonoBehaviour, IInitializable, IDisposable
     {
         public static Game Instance;
+        public static int ReloadCount { get; private set; }
 
         private LevelContainer m_levelContainer;
         private Level m_level;
@@ -40,6 +42,8 @@ namespace Game
 
         public void Initialize()
         {
+            GameAnalytics.Initialize();
+
             DOTween.SetTweensCapacity(600, 200);
             State.Subscribe(OnStateChanged).AddTo(Disposable);
             m_levelContainer.EnemyContainer.IsAllEnemiesDestroyed.Subscribe(OnAllEnemiesDestroyedChange)
@@ -57,6 +61,9 @@ namespace Game
             CoinsCount.Value += amount;
             PlayerPrefs.SetInt("Coins", CoinsCount.Value);
             PlayerPrefs.Save();
+
+            // todo
+          //  GameAnalytics.NewResourceEvent(GAResourceFlowType.Source, "1", 1, "Coins", "1");
         }
 
         private void OnStateChanged(GameState state)
@@ -82,18 +89,22 @@ namespace Game
                     m_enemyContainer.DeactivateAll();
                     m_lockerController.IsLockerSafe.Value = true;
 
-                    DOVirtual.DelayedCall(2f,
-                        () => State.Value = GameState.Round);
                     break;
                 case GameState.Round:
+                    GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, "Game",
+                        m_levelContainer.CurrentLevel.name);
                     m_enemyContainer.ActivateAll();
                     m_player.ToggleInput(true);
                     break;
                 case GameState.Win:
+                    GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "Game",
+                        m_levelContainer.CurrentLevel.name);
                     m_enemyContainer.DeactivateAll();
                     m_player.ToggleInput(false);
                     break;
                 case GameState.Fail:
+                    GameAnalytics.NewProgressionEvent(GAProgressionStatus.Fail, "Game",
+                        m_levelContainer.CurrentLevel.name);
                     m_enemyContainer.DeactivateAll();
                     break;
             }
@@ -115,6 +126,8 @@ namespace Game
         {
             if (next)
                 m_levelContainer.NextLevel();
+
+            ReloadCount++;
             SceneManager.LoadScene("SampleScene");
         }
 

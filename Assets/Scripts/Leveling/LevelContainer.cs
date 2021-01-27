@@ -6,7 +6,7 @@ namespace Leveling
 {
     public sealed class LevelContainer : MonoBehaviour
     {
-        private static int _currentLevel;
+        public static int CurrentLevelIndex { get; private set; }
         [SerializeField] private int m_debugStartLevel = 0;
         [SerializeField] private List<Level> m_progression;
 
@@ -23,16 +23,16 @@ namespace Leveling
 #if UNITY_EDITOR
             if (m_debugStartLevel > 0)
             {
-                _currentLevel = m_debugStartLevel;
+                CurrentLevelIndex = m_debugStartLevel;
             }
 #endif
 
-            int levelIndex = _currentLevel;
+            int levelIndex = CurrentLevelIndex;
 
             levelIndex %= m_progression.Count;
             if (levelIndex >= m_progression.Count)
             {
-                _currentLevel = levelIndex = 0;
+                CurrentLevelIndex = levelIndex = 0;
             }
 
             CurrentLevel = Instantiate(m_progression[levelIndex], transform);
@@ -41,7 +41,7 @@ namespace Leveling
 
         public void NextLevel()
         {
-            _currentLevel += _currentLevel >= m_progression.Count - 1 ? -_currentLevel : 1;
+            CurrentLevelIndex += CurrentLevelIndex >= m_progression.Count - 1 ? -CurrentLevelIndex : 1;
         }
     }
 }
