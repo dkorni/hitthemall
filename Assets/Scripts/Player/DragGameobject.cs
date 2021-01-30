@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using Game;
 using Player;
 using UniRx;
 using UnityEngine;
@@ -16,6 +17,7 @@ public class DragGameobject : MonoBehaviour
     [HideInInspector] public ReactiveProperty<float> CurrentPulling;
 
     [SerializeField] private Rigidbody _slingshot;
+    [SerializeField] private Collider _collider;
 
     [SerializeField] private LayerMask layerMask;
 
@@ -44,6 +46,11 @@ public class DragGameobject : MonoBehaviour
         _startPosition = rigidbody.position;
         _enemyDestroyer.CanDestroy = false;
         _ignoreLayerMask = LayerMask.GetMask("Obstacle");
+        Game.Game.Instance.State.ObserveEveryValueChanged(v => v.Value).Subscribe(v =>
+        {
+            if(v == GameState.Fail)
+                _collider.enabled = false;
+        });
     }
 
     #region Control

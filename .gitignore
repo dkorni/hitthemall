@@ -5,3 +5,7 @@ obj/
 Logs/
 game.apk
 hitallthem.apk
+*.aab
+*.apk
+*.keystore
+*.jks

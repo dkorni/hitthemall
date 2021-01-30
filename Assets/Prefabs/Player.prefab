@@ -2719,6 +2719,7 @@ MonoBehaviour:
   CurrentPulling:
     value: 0
   _slingshot: {fileID: 1476884908}
+  _collider: {fileID: 886206647119170770}
   layerMask:
     serializedVersion: 2
     m_Bits: 256
