@@ -7,11 +7,26 @@ using UnityEngine;
 
 public class EffectPool : MonoBehaviour
 {
+    public static EffectPool Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<EffectPool>();
+            }
+
+            return _instance;
+        }
+    }
+
+
+    private static EffectPool _instance;
+
     [SerializeField] private GameObject _particlePrefab;
     [SerializeField] private LevelContainer _levelContainer;
 
     private Stack<GameObject> _effectObjects;
-   
 
     // Start is called before the first frame update
     void Start()

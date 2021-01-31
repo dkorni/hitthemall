@@ -4,7 +4,7 @@ using Game;
 using UniRx;
 using UnityEngine;
 
-public class FailPanelController : MonoBehaviour
+public class FailPanelController : FinalPanelController
 {
     [SerializeField] private Animator _animator;
 
@@ -19,9 +19,10 @@ public class FailPanelController : MonoBehaviour
             });
     }
 
-    private void Show()
+    protected override void Show()
     {
         _animator.SetTrigger("Fail");
+        base.Show();
     }
 
     public void Retry()

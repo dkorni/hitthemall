@@ -145,6 +145,8 @@
     <Compile Include="Assets\FacebookSDK\Examples\Scripts\SubMenus\AppRequests.cs" />
     <Compile Include="Assets\Scripts\UI\StartController.cs" />
     <Compile Include="Assets\Low Poly Rocks Pack\Bonus Assets\Scripts\LowPolyRocks_SunControl.cs" />
+    <Compile Include="Assets\Scripts\UI\FinalPanelController.cs" />
+    <Compile Include="Assets\Scripts\Game\Effect.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\GameAnalytics\Readme.txt" />

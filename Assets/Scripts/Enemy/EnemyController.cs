@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
 using Zenject;
+using Random = UnityEngine.Random;
 
 namespace Enemy
 {
@@ -16,6 +17,10 @@ namespace Enemy
          public Rigidbody m_pelvisRigid;
         [SerializeField] private Collider m_collider;
         [SerializeField] private GameObject m_coinPrefab;
+
+        [SerializeField] private AudioClip[] _deathClips;
+
+        [SerializeField] private AudioSource _audioSource;
 
         [HideInInspector] public ReactiveProperty<bool> IsAlive = new ReactiveProperty<bool>(true);
 
@@ -60,6 +65,13 @@ namespace Enemy
 
             // spawn coin
             Instantiate(m_coinPrefab, transform.position + Vector3.up*1.7f, Quaternion.identity);
+            PlayShot();
+        }
+
+        private void PlayShot()
+        {
+            var index = Random.Range(0, _deathClips.Length - 1);
+            _audioSource.PlayOneShot(_deathClips[index]);
         }
     }
 }

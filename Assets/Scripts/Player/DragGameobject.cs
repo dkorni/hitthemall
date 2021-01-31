@@ -4,6 +4,7 @@ using Game;
 using Player;
 using UniRx;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class DragGameobject : MonoBehaviour
 {
@@ -32,6 +33,10 @@ public class DragGameobject : MonoBehaviour
     [SerializeField] private LineRenderer _aimLine;
 
     [SerializeField] private HingeJoint _hingeJoint;
+
+    [SerializeField] private AudioClip[] _shotClips;
+
+    [SerializeField] private AudioSource _audioSource;
 
     private Vector3 _startPosition;
 
@@ -144,6 +149,7 @@ public class DragGameobject : MonoBehaviour
         CurrentPulling.Value = 0;
         _aimLine.enabled = false;
         OnShoot?.Invoke();
+        PlayShot();
     }
 
     #endregion
@@ -231,5 +237,11 @@ public class DragGameobject : MonoBehaviour
 
             yield return new WaitForFixedUpdate();
         }
+    }
+
+    private void PlayShot()
+    {
+        var index = Random.Range(0, _shotClips.Length - 1);
+        _audioSource.PlayOneShot(_shotClips[index]);
     }
 }

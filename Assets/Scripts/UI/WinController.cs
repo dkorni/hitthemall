@@ -5,7 +5,7 @@ using Game;
 using UniRx;
 using UnityEngine;
 
-public class WinController : MonoBehaviour
+public class WinController : FinalPanelController
 {
     [SerializeField] private Animator _animator;
     [SerializeField] private float _delayToShow;
@@ -21,9 +21,10 @@ public class WinController : MonoBehaviour
             });
     }
 
-    private void Show()
+    protected override void Show()
     {
         _animator.SetTrigger("Fail");
+        base.Show();
     }
 
     public void Next()

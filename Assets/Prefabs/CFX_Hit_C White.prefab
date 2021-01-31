@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 19800000}
   - component: {fileID: 19900000}
   - component: {fileID: 11400000}
+  - component: {fileID: -8190709018261177503}
   m_Layer: 0
   m_Name: CFX_Hit_C White
   m_TagString: FxTemporaire
@@ -4713,3 +4714,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnlyDeactivate: 0
+--- !u!114 &-8190709018261177503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b95d7f1da93ac6544bf32e0b0ea6b112, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
