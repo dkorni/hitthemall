@@ -55,6 +55,9 @@ public class EffectPool : MonoBehaviour
 
     public GameObject Take()
     {
+        if (_effectObjects.Count == 0)
+            return null;
+
         var particle = _effectObjects.Pop();
         particle.SetActive(true);
         return particle;

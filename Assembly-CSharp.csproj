@@ -147,6 +147,8 @@
     <Compile Include="Assets\Low Poly Rocks Pack\Bonus Assets\Scripts\LowPolyRocks_SunControl.cs" />
     <Compile Include="Assets\Scripts\UI\FinalPanelController.cs" />
     <Compile Include="Assets\Scripts\Game\Effect.cs" />
+    <Compile Include="Assets\Scripts\NotDestroy.cs" />
+    <Compile Include="Assets\Scripts\PrepareScene.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\GameAnalytics\Readme.txt" />

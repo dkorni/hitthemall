@@ -27,6 +27,11 @@ namespace Player
 
                 enemy.Kill(vel.normalized * m_pushForceMult);
                 var hitEffect =  effectPool.Take();
+
+                // temp sln
+                if(hitEffect == null)
+                    return;
+
                 hitEffect.transform.position = enemy.m_pelvisRigid.position;
                 hitEffect.GetComponent<ParticleSystem>().Play();
             }

@@ -53,7 +53,7 @@ public class DragGameobject : MonoBehaviour
         _ignoreLayerMask = LayerMask.GetMask("Obstacle");
         Game.Game.Instance.State.ObserveEveryValueChanged(v => v.Value).Subscribe(v =>
         {
-            if(v == GameState.Fail)
+            if(v == GameState.Fail || v == GameState.Win)
                 _collider.enabled = false;
         });
     }
