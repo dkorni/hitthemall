@@ -1,10 +1,8 @@
-﻿using System;
-using System.Runtime.InteropServices;
-using DG.Tweening;
+﻿using DG.Tweening;
 using Enemy;
-using GameAnalyticsSDK;
 using Leveling;
 using Player;
+using System;
 using UniRx;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -42,8 +40,6 @@ namespace Game
 
         public void Initialize()
         {
-            GameAnalytics.Initialize();
-
             DOTween.SetTweensCapacity(600, 200);
             State.Subscribe(OnStateChanged).AddTo(Disposable);
             m_levelContainer.EnemyContainer.IsAllEnemiesDestroyed.Subscribe(OnAllEnemiesDestroyedChange)
@@ -61,9 +57,6 @@ namespace Game
             CoinsCount.Value += amount;
             PlayerPrefs.SetInt("Coins", CoinsCount.Value);
             PlayerPrefs.Save();
-
-            // todo
-          //  GameAnalytics.NewResourceEvent(GAResourceFlowType.Source, "1", 1, "Coins", "1");
         }
 
         private void OnStateChanged(GameState state)
@@ -91,20 +84,15 @@ namespace Game
 
                     break;
                 case GameState.Round:
-                    GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, "Game",
-                        m_levelContainer.CurrentLevel.name);
+                  
                     m_enemyContainer.ActivateAll();
                     m_player.ToggleInput(true);
                     break;
                 case GameState.Win:
-                    GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "Game",
-                        m_levelContainer.CurrentLevel.name);
                     m_enemyContainer.DeactivateAll();
                     m_player.ToggleInput(false);
                     break;
                 case GameState.Fail:
-                    GameAnalytics.NewProgressionEvent(GAProgressionStatus.Fail, "Game",
-                        m_levelContainer.CurrentLevel.name);
                     m_enemyContainer.DeactivateAll();
                     break;
             }
